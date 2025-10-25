@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>James Meichtry Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-xxx" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     /* ====== Global Reset ====== */
     * {
@@ -90,6 +92,7 @@
     #contact {
       background: linear-gradient(120deg, #0f0c29, #302b63, #24243e);
       background-attachment: fixed;
+      padding-bottom: 6rem;
     }
 
     h2 {
@@ -104,7 +107,7 @@
       line-height: 1.7;
     }
 
-    /* ====== Subheadings ====== */
+    /* ====== Subsection Titles ====== */
     .subsection-title {
       margin-top: 3rem;
       margin-bottom: 1rem;
@@ -148,6 +151,50 @@
       color: #ddd;
       font-size: 0.95rem;
       line-height: 1.6;
+    }
+
+    /* ====== Contact Section ====== */
+    .contact-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 1.2rem;
+      color: #fff;
+      background: rgba(255,255,255,0.08);
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+
+    .contact-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px rgba(0,198,255,0.3);
+      background: rgba(255,255,255,0.15);
+    }
+
+    .contact-item i {
+      font-size: 1.8rem;
+      color: #00c6ff;
+    }
+
+    .contact-item a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .contact-item a:hover {
+      color: #00c6ff;
+      text-shadow: 0 0 10px #00c6ff;
     }
 
     /* ====== Footer ====== */
@@ -215,7 +262,24 @@
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>If you’d like to connect, collaborate, or discuss engineering opportunities, feel free to reach out via LinkedIn or email.</p>
+    <p>Get in touch through any of the following platforms:</p>
+
+    <div class="contact-container">
+      <div class="contact-item">
+        <i class="fas fa-phone"></i>
+        <a href="tel:+447484898839">+44 7484 898839</a>
+      </div>
+
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:JamesMeichtry@icloud.com">JamesMeichtry@icloud.com</a>
+      </div>
+
+      <div class="contact-item">
+        <i class="fab fa-linkedin"></i>
+        <a href="https://www.linkedin.com/in/jamesmeichtry" target="_blank">LinkedIn — James Meichtry</a>
+      </div>
+    </div>
   </section>
 
   <footer>
