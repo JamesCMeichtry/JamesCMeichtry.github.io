@@ -200,4 +200,40 @@
     <div class="project-grid">
       <div class="project-card">
         <h3>Custom Lighting Display</h3>
-        <p>Interactive RGB LED system for retail displays, program
+        <p>Interactive RGB LED system for retail displays, programmed with smooth transitions and audio-reactive lighting effects.</p>
+      </div>
+      <div class="project-card">
+        <h3>Music-Responsive Visuals</h3>
+        <p>Arduino-based project transforming sound frequency inputs into synchronized lighting and motion visuals for event setups.</p>
+      </div>
+      <div class="project-card">
+        <h3>Creative Product Display Stand</h3>
+        <p>Designed and fabricated a modular display with embedded lighting for retail and promotional environments.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>If you’d like to connect, collaborate, or discuss engineering opportunities, feel free to reach out via LinkedIn or email.</p>
+  </section>
+
+  <footer>
+    © 2025 James Meichtry. All rights reserved.
+  </footer>
+
+  <script>
+    // Smooth fade-in on scroll
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>
