@@ -1,52 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>James Meichtry Portfolio</title>
+  <style>
+    /* Global Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
 
-  <!-- Link to external stylesheet -->
-  <link rel="stylesheet" href="style.css">
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 1rem 2rem;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00c6ff;
+    }
+
+    section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 1rem;
+      position: relative;
+    }
+
+    /* Smooth scroll fade animation */
+    section {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #00c6ff;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      background: rgba(0, 0, 0, 0.5);
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
-  <!-- Navbar -->
-  <nav>
-      <div class="logo">James Meichtry</div>
-      <div class="nav-links">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-      </div>
-  </nav>
+  <header>
+    <h1>James Meichtry Portfolio</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-      <div class="hero-content">
-          <h1>James Meichtry Portfolio</h1>
-          <p>Welcome to my website aiming to present my journey in developing my skills and furthering my experience within the engineering field.</p>
-          <button>Explore My Work</button>
-      </div>
+  <section id="home">
+    <h2>Welcome to my website</h2>
+    <p>Aiming to present my journey in developing my skills and furthering my experience within the engineering field.</p>
   </section>
 
-  <!-- Features Section -->
-  <section id="about" class="features">
-      <div class="feature">
-          <h3>Engineering Projects</h3>
-          <p>A showcase of the technical projects and designs I’ve worked on, highlighting my practical and analytical skills.</p>
-      </div>
-      <div class="feature">
-          <h3>Technical Skills</h3>
-          <p>Hands-on experience with programming, electronics, and mechanical systems to solve engineering challenges.</p>
-      </div>
-      <div class="feature">
-          <h3>Continuous Learning</h3>
-          <p>Committed to improving my expertise through real-world projects and professional development.</p>
-      </div>
+  <section id="projects">
+    <h2>Projects</h2>
+    <p>Here I will showcase the various projects I have worked on, highlighting the technical and practical skills developed.</p>
   </section>
 
-  <!-- Footer -->
-  <footer id="co
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>If you’d like to connect or collaborate, feel free to reach out.</p>
+  </section>
+
+  <footer>
+    © 2025 James Meichtry. All rights reserved.
+  </footer>
+
+  <script>
+    // Smooth fade-in scroll animation
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>
