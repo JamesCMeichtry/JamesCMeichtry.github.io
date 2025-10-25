@@ -56,7 +56,7 @@
       text-shadow: 0 0 10px #00c6ff;
     }
 
-    /* ====== Hero Section ====== */
+    /* ====== Section ====== */
     section {
       min-height: 100vh;
       display: flex;
@@ -84,6 +84,7 @@
     #projects {
       background: linear-gradient(120deg, #2b5876, #4e4376);
       background-attachment: fixed;
+      padding-top: 8rem;
     }
 
     #contact {
@@ -103,12 +104,22 @@
       line-height: 1.7;
     }
 
-    /* ====== Projects Section ====== */
+    /* ====== Subheadings ====== */
+    .subsection-title {
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+      color: #1de9b6;
+      border-bottom: 2px solid rgba(255,255,255,0.2);
+      padding-bottom: 0.5rem;
+    }
+
+    /* ====== Project Grid ====== */
     .project-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
-      margin-top: 3rem;
+      margin-top: 2rem;
       width: 90%;
       max-width: 1000px;
     }
@@ -126,6 +137,17 @@
       transform: translateY(-10px);
       box-shadow: 0 12px 30px rgba(0, 198, 255, 0.4);
       border: 1px solid #00c6ff;
+    }
+
+    .project-card h3 {
+      color: #00c6ff;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-card p {
+      color: #ddd;
+      font-size: 0.95rem;
+      line-height: 1.6;
     }
 
     /* ====== Footer ====== */
@@ -155,43 +177,27 @@
 
   <section id="projects">
     <h2>Projects</h2>
+
+    <!-- University Work -->
+    <h3 class="subsection-title">University Work</h3>
     <div class="project-grid">
       <div class="project-card">
         <h3>Automated Wire Cutter</h3>
-        <p>An Arduino-based precision wire cutter featuring dual DRV8825 motor drivers, I2C LCD, and emergency-stop integration.</p>
+        <p>An Arduino-based precision wire cutter featuring dual DRV8825 motor drivers, I2C LCD interface, and emergency-stop system integration.</p>
       </div>
       <div class="project-card">
-        <h3>Stepper Motor Control</h3>
-        <p>Testing and control system for Motech and Sanmotion stepper motors using Arduino Uno and DRV8825 drivers.</p>
+        <h3>Stepper Motor Control System</h3>
+        <p>Motor testing and control setup using Motech and Sanmotion stepper motors, showcasing microstepping control via DRV8825 modules.</p>
       </div>
       <div class="project-card">
-        <h3>LCD Interface System</h3>
-        <p>Custom I2C-based LCD display for user feedback and real-time status display in embedded projects.</p>
+        <h3>LCD Feedback Interface</h3>
+        <p>A compact I2C-based display solution for user interface and real-time process feedback in embedded projects.</p>
       </div>
     </div>
-  </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>If you’d like to connect, collaborate, or discuss engineering opportunities, feel free to reach out via LinkedIn or email.</p>
-  </section>
-
-  <footer>
-    © 2025 James Meichtry. All rights reserved.
-  </footer>
-
-  <script>
-    // Smooth fade-in effect when scrolling
-    const sections = document.querySelectorAll('section');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.2 });
-
-    sections.forEach(section => observer.observe(section));
-  </script>
-</body>
-</html>
+    <!-- Creative & Retail Work -->
+    <h3 class="subsection-title">Creative, Retail & Entertainment Projects</h3>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>Custom Lighting Display</h3>
+        <p>Interactive RGB LED system for retail displays, program
