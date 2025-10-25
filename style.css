@@ -129,7 +129,7 @@ footer a {
     text-decoration: none;
 }
 
-/* small screen tweaks */
+/* Small screen tweaks */
 @media (max-width: 600px) {
     .hero h1 {
         font-size: 2rem;
@@ -149,7 +149,7 @@ footer a {
     }
 }
 
-/* smooth scroll */
+/* Smooth scroll */
 html {
     scroll-behavior: smooth;
 }
