@@ -1,85 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>James Meichtry | Portfolio</title>
-  <style>
-    /* === Base Styles === */
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #0a0f1c;
-      color: #fff;
-      margin: 0;
-      overflow-x: hidden;
-    }
-    header {
-      position: fixed;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.6);
-      backdrop-filter: blur(10px);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      z-index: 100;
-    }
-    header h1 {
-      font-size: 1.5rem;
-      color: #00c6ff;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 1rem;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: #00c6ff;
-    }
-
-    /* === Home Section === */
-    section {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 2rem;
-    }
-
-    #home {
-      background: linear-gradient(120deg, #00172d, #002a4e);
-    }
-    #home h2 {
-      font-size: 3rem;
-      color: #00c6ff;
-    }
-    #home p {
-      font-size: 1.2rem;
-      color: #e0f7ff;
-      max-width: 600px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
   <header>
     <h1>James Meichtry</h1>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <section id="home">
+  <section id="home" class="fade-in">
     <h2>Welcome to My Portfolio</h2>
-    <p>
-      I'm James Meichtry — a creative and technical designer passionate about engineering, design, and innovative digital projects.
-    </p>
+    <p>I'm a passionate developer focused on automation, embedded systems, and interactive web design. Explore my work below and get in touch!</p>
+    <a href="projects.html" class="btn">View My Projects</a>
   </section>
+
+  <footer>
+    <p>© 2025 James Meichtry</p>
+  </footer>
 </body>
 </html>
 
