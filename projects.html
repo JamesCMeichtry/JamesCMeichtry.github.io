@@ -1,44 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects | James Meichtry</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects — James Meichtry</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>My Projects</h1>
+    <h1>James Meichtry Portfolio</h1>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html" class="active">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+      <a href="index.html">Home</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <section class="fade-in">
-    <h2>Featured Work</h2>
+  <!-- subtle floating accents -->
+  <div class="float-accent accent-a" aria-hidden="true"></div>
+  <div class="float-accent accent-b" aria-hidden="true"></div>
 
-    <div class="project">
-      <h3>Automated Wire Cutter</h3>
-      <p>An Arduino-based automated wire cutting machine using DRV8825 drivers, stepper motors, and a rotary encoder for menu navigation.</p>
+  <section id="projects" data-parallax-speed="0.25">
+    <h2>Projects</h2>
+
+    <h3 class="subsection-title">University Work</h3>
+    <div class="project-grid">
+      <article class="project-card" data-tilt>
+        <h3>Automated Wire Cutter</h3>
+        <p>An Arduino-based precision wire cutter featuring dual DRV8825 motor drivers, I2C LCD interface, and emergency-stop integration.</p>
+      </article>
+
+      <article class="project-card" data-tilt>
+        <h3>Stepper Motor Control System</h3>
+        <p>Motor testing and control setup using Motech and Sanmotion stepper motors, showcasing microstepping control via DRV8825 modules.</p>
+      </article>
+
+      <article class="project-card" data-tilt>
+        <h3>LCD Feedback Interface</h3>
+        <p>A compact I2C-based display solution for user interface and real-time process feedback in embedded projects.</p>
+      </article>
     </div>
 
-    <div class="project">
-      <h3>Stepper Motor Control System</h3>
-      <p>A testing circuit built to control dual stepper motors with independent switches, using precise pulse timing for calibration and testing.</p>
-    </div>
+    <h3 class="subsection-title">Creative, Retail & Entertainment Projects</h3>
+    <div class="project-grid">
+      <article class="project-card" data-tilt>
+        <h3>Custom Lighting Display</h3>
+        <p>Interactive RGB LED system for retail displays, programmed with smooth transitions and audio-reactive lighting effects.</p>
+      </article>
 
-    <div class="project">
-      <h3>Interactive Portfolio Website</h3>
-      <p>This website itself — coded from scratch with HTML, CSS, and JavaScript animations to showcase my skills and projects.</p>
+      <article class="project-card" data-tilt>
+        <h3>Music-Responsive Visuals</h3>
+        <p>Arduino-based project transforming sound frequency inputs into synchronized lighting and motion visuals for event setups.</p>
+      </article>
+
+      <article class="project-card" data-tilt>
+        <h3>Creative Product Display Stand</h3>
+        <p>Designed and fabricated a modular display with embedded lighting for retail and promotional environments.</p>
+      </article>
     </div>
   </section>
 
-  <footer>
-    <p>© 2025 James Meichtry</p>
-  </footer>
+  <footer>© 2025 James Meichtry. All rights reserved.</footer>
+
+  <script src="shared.js"></script>
 </body>
 </html>
+
