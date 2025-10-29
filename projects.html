@@ -1,69 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Projects — James Meichtry</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | James Meichtry</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>James Meichtry Portfolio</h1>
+    <h1>My Projects</h1>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="projects.html" class="active">Projects</a>
-      <a href="contact.html">Contact</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <!-- subtle floating accents -->
-  <div class="float-accent accent-a" aria-hidden="true"></div>
-  <div class="float-accent accent-b" aria-hidden="true"></div>
+  <section class="projects-section fade-in">
+    <h2>Featured Work</h2>
 
-  <section id="projects" data-parallax-speed="0.25">
-    <h2>Projects</h2>
-
-    <h3 class="subsection-title">University Work</h3>
-    <div class="project-grid">
-      <article class="project-card" data-tilt>
+    <div class="project-card">
+      <div class="project-text">
         <h3>Automated Wire Cutter</h3>
-        <p>An Arduino-based precision wire cutter featuring dual DRV8825 motor drivers, I2C LCD interface, and emergency-stop integration.</p>
-      </article>
-
-      <article class="project-card" data-tilt>
-        <h3>Stepper Motor Control System</h3>
-        <p>Motor testing and control setup using Motech and Sanmotion stepper motors, showcasing microstepping control via DRV8825 modules.</p>
-      </article>
-
-      <article class="project-card" data-tilt>
-        <h3>LCD Feedback Interface</h3>
-        <p>A compact I2C-based display solution for user interface and real-time process feedback in embedded projects.</p>
-      </article>
+        <p>An Arduino-based automated wire cutting machine using DRV8825 drivers, stepper motors, and a rotary encoder for menu navigation. Designed for precision and efficiency in wire preparation tasks.</p>
+      </div>
+      <div class="project-image">
+        <img src="https://via.placeholder.com/400x250.png?text=Wire+Cutter+Project" alt="Automated Wire Cutter">
+      </div>
     </div>
 
-    <h3 class="subsection-title">Creative, Retail & Entertainment Projects</h3>
-    <div class="project-grid">
-      <article class="project-card" data-tilt>
-        <h3>Custom Lighting Display</h3>
-        <p>Interactive RGB LED system for retail displays, programmed with smooth transitions and audio-reactive lighting effects.</p>
-      </article>
+    <div class="project-card">
+      <div class="project-text">
+        <h3>Stepper Motor Control System</h3>
+        <p>A dual-motor control system built for calibration and testing. It utilizes DRV8825 drivers and Arduino Uno for precise pulse control and independent motor operation via dedicated switches.</p>
+      </div>
+      <div class="project-image">
+        <img src="https://via.placeholder.com/400x250.png?text=Stepper+Motor+Control" alt="Stepper Motor Control System">
+      </div>
+    </div>
 
-      <article class="project-card" data-tilt>
-        <h3>Music-Responsive Visuals</h3>
-        <p>Arduino-based project transforming sound frequency inputs into synchronized lighting and motion visuals for event setups.</p>
-      </article>
-
-      <article class="project-card" data-tilt>
-        <h3>Creative Product Display Stand</h3>
-        <p>Designed and fabricated a modular display with embedded lighting for retail and promotional environments.</p>
-      </article>
+    <div class="project-card">
+      <div class="project-text">
+        <h3>Interactive Portfolio Website</h3>
+        <p>This very website — handcrafted with HTML, CSS, and JavaScript to showcase my engineering and design projects, featuring smooth transitions and responsive layout for all devices.</p>
+      </div>
+      <div class="project-image">
+        <img src="https://via.placeholder.com/400x250.png?text=Portfolio+Website" alt="Portfolio Website">
+      </div>
     </div>
   </section>
 
-  <footer>© 2025 James Meichtry. All rights reserved.</footer>
-
-  <script src="shared.js"></script>
+  <footer>
+    <p>© 2025 James Meichtry</p>
+  </footer>
 </body>
 </html>
 
