@@ -1,37 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | James Meichtry</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact — James Meichtry</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Contact Me</h1>
+    <h1>James Meichtry Portfolio</h1>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
-      </ul>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html" class="active">Contact</a>
     </nav>
   </header>
 
-  <section class="fade-in">
-    <h2>Get In Touch</h2>
-    <p>I'd love to hear from you! Feel free to reach out via any of the methods below:</p>
+  <!-- subtle floating accents -->
+  <div class="float-accent accent-a" aria-hidden="true"></div>
+  <div class="float-accent accent-b" aria-hidden="true"></div>
 
-    <div class="contact-info">
-      <p>📞 Phone: <strong>+44 7484 898839</strong></p>
-      <p>📧 Email: <strong><a href="mailto:JamesMeichtry@icloud.com">JamesMeichtry@icloud.com</a></strong></p>
-      <p>💼 LinkedIn: <strong><a href="https://www.linkedin.com/in/JamesMeichtry" target="_blank">James Meichtry</a></strong></p>
+  <section id="contact" data-parallax-speed="0.12">
+    <h2>Contact</h2>
+    <p class="lead">Get in touch through any of the following platforms — I’m happy to discuss projects, collaborations, or opportunities.</p>
+
+    <div class="contact-container">
+      <!-- Phone -->
+      <div class="contact-item">
+        <span class="contact-icon" aria-hidden="true">
+          <!-- phone svg -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.08 4.18 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.72c.12.9.35 1.77.67 2.59a2 2 0 0 1-.45 2.11L9.91 9.91a16 16 0 0 0 6 6l1.5-1.5a2 2 0 0 1 2.11-.45c.82.32 1.69.55 2.59.67A2 2 0 0 1 22 16.92z" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="contact-text"><a href="tel:+447484898839" style="color:inherit; text-decoration:none;">+44 7484 898839</a></span>
+      </div>
+
+      <!-- Email -->
+      <div class="contact-item">
+        <span class="contact-icon" aria-hidden="true">
+          <!-- mail svg -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2H4a2 2 0 0 1-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="1.2" fill="none" />
+            <path d="M22 6l-10 7L2 6" stroke="currentColor" stroke-width="1.2" fill="none" />
+          </svg>
+        </span>
+        <span class="contact-text"><a href="mailto:JamesMeichtry@icloud.com" style="color:inherit; text-decoration:none;">JamesMeichtry@icloud.com</a></span>
+      </div>
+
+      <!-- LinkedIn (plain text as requested) -->
+      <div class="contact-item">
+        <span class="contact-icon" aria-hidden="true">
+          <!-- linkedin svg simplified -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.98 3.5C4.98 4.6 4.08 5.5 2.98 5.5 1.88 5.5 1 4.6 1 3.5 1 2.4 1.88 1.5 2.98 1.5 4.08 1.5 4.98 2.4 4.98 3.5z" fill="currentColor"/>
+            <path d="M6 8.5h3v11H6zM12.75 8.5c2 0 3.25 1.07 3.25 3.33V19.5h-3v-6.17c0-1.47-.53-2.16-1.75-2.16-1.2 0-1.97.82-1.97 2.16V19.5h-3v-11h3v1.53c.6-.92 1.66-1.53 2.92-1.53z" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="contact-text">LinkedIn — JamesMeichtry</span>
+      </div>
     </div>
   </section>
 
-  <footer>
-    <p>© 2025 James Meichtry</p>
-  </footer>
+  <footer>© 2025 James Meichtry. All rights reserved.</footer>
+
+  <script src="shared.js"></script>
 </body>
 </html>
 
