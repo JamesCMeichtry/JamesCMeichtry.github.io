@@ -1,76 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | James Meichtry</title>
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #0a0f1c;
-      color: #fff;
-      margin: 0;
-      overflow-x: hidden;
-    }
-    header {
-      position: fixed;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.6);
-      backdrop-filter: blur(10px);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      z-index: 100;
-    }
-    header h1 {
-      font-size: 1.5rem;
-      color: #00c6ff;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 1rem;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: #00c6ff;
-    }
-    section {
-      padding: 7rem 2rem 4rem;
-      text-align: center;
-    }
-    section h2 {
-      font-size: 2.5rem;
-      color: #00c6ff;
-      margin-bottom: 2rem;
-    }
-    .contact-item {
-      font-size: 1.2rem;
-      margin: 1rem 0;
-    }
-    .contact-item span {
-      color: #00c6ff;
-      font-weight: bold;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
   <header>
-    <h1>James Meichtry</h1>
+    <h1>Contact Me</h1>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <div class="contact-item"><span>📞 Phone:</span> +44 7484898839</div>
-    <div class="contact-item"><span>📧 Email:</span> JamesMeichtry@icloud.com</div>
-    <div class="contact-item"><span>💼 LinkedIn:</span> JamesMeichtry</div>
+  <section class="fade-in">
+    <h2>Get In Touch</h2>
+    <p>I'd love to hear from you! Feel free to reach out via any of the methods below:</p>
+
+    <div class="contact-info">
+      <p>📞 Phone: <strong>+44 7484 898839</strong></p>
+      <p>📧 Email: <strong><a href="mailto:JamesMeichtry@icloud.com">JamesMeichtry@icloud.com</a></strong></p>
+      <p>💼 LinkedIn: <strong><a href="https://www.linkedin.com/in/JamesMeichtry" target="_blank">James Meichtry</a></strong></p>
+    </div>
   </section>
+
+  <footer>
+    <p>© 2025 James Meichtry</p>
+  </footer>
 </body>
 </html>
+
