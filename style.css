@@ -153,3 +153,8 @@ footer {
   text-decoration: underline;
 }
 
+.detail-image {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 20px;
+}
