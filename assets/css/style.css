@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #0f0f0f;
+  color: #fff;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #1a1a1a;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  color: #00bcd4;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav a.active,
+nav a:hover {
+  color: #00bcd4;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(145deg, #1e1e1e, #121212);
+}
+
+.btn {
+  display: inline-block;
+  background-color: #00bcd4;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #0097a7;
+}
+
+/* PROJECTS PAGE */
+.projects-page {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 50px;
+}
+
+.project-box {
+  display: flex;
+  background: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.project-box:hover {
+  transform: translateY(-5px);
+}
+
+.project-content {
+  flex: 2;
+  padding: 30px;
+}
+
+.project-image {
+  flex: 1;
+  background-color: #0f0f0f;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-detail {
+  padding: 50px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.project-detail img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1a1a1a;
+  margin-top: 50px;
+}
