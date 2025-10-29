@@ -1,75 +1,107 @@
-/* === Projects Page Styling === */
-section.fade-in {
-  padding: 5rem 2rem;
-  max-width: 1100px;
-  margin: 0 auto;
-  text-align: center;
+/* style.css - Shared styles for all pages */
+
+/* ===== Global Reset ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
+html, body { height: 100%; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  overflow-x: hidden;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
 
-section.fade-in h2 {
-  font-size: 2.3rem;
-  color: #2c3e50;
-  margin-bottom: 3rem;
-  position: relative;
+/* ===== Header ===== */
+header {
+  position: fixed; top: 0; left: 0; right: 0;
+  display:flex; justify-content:space-between; align-items:center;
+  padding:1rem 2rem; z-index:1000;
+  background: rgba(0,0,0,0.45); backdrop-filter: blur(8px);
+  box-shadow: 0 3px 12px rgba(0,0,0,0.35);
+}
+header h1 { color:#00c6ff; font-size:1.4rem; font-weight:600; letter-spacing:0.6px; }
+nav a { color:#fff; text-decoration:none; margin-left:1.25rem; font-weight:500; transition: .25s; }
+nav a:hover { color:#00c6ff; text-shadow:0 0 8px rgba(0,198,255,0.15); }
+nav a.active { color:#00c6ff; text-shadow:0 0 10px rgba(0,198,255,0.18); }
+
+/* ===== Section base ===== */
+section {
+  min-height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center;
+  text-align:center; padding: 6rem 1rem; position:relative; overflow:hidden;
+  transition: opacity .8s ease, transform .8s ease;
+  opacity:0; transform: translateY(40px);
+}
+section.visible { opacity:1; transform: translateY(0); }
+
+/* Parallax backgrounds per section */
+#home { background: linear-gradient(120deg, #141e30 0%, #243b55 100%); background-attachment: fixed; background-position: center 0px; }
+#projects { background: linear-gradient(120deg, #2b5876 0%, #4e4376 100%); background-attachment: fixed; background-position: center 0px; }
+#contact { background: linear-gradient(120deg, #0f0c29 0%, #302b63 50%, #24243e 100%); background-attachment: fixed; background-position: center 0px; }
+
+h2 { color:#00c6ff; font-size:2.6rem; margin-bottom:0.75rem; }
+p.lead { max-width:900px; font-size:1.15rem; line-height:1.7; color:#e6f7ff; margin-bottom:0.5rem; }
+
+/* ===== Projects layout & cards (original style restored) ===== */
+.project-grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap:1.6rem;
+  width:92%;
+  max-width:1100px;
+  margin-top:2rem;
 }
 
-section.fade-in h2::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 3px;
-  background-color: #1abc9c;
-  margin: 1rem auto 0;
-  border-radius: 2px;
+.project-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+  border-radius:14px; padding:1.25rem; position:relative; overflow:hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+  transition: transform .35s ease, box-shadow .35s ease;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  opacity: 0;
+  transform: translateY(18px);
 }
+.project-card.visible { opacity:1; transform: translateY(0); }
+.project-card:hover { transform: translateY(-8px) scale(1.01); box-shadow: 0 16px 40px rgba(0,198,255,0.12); border:1px solid rgba(0,198,255,0.12); }
 
-/* Project cards */
-.project {
-  background-color: #fff;
-  padding: 2rem;
-  margin: 2rem 1rem;
-  border-radius: 10px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: left;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+.project-card h3 { color:#00c6ff; margin-bottom:0.4rem; font-size:1.05rem; }
+.project-card p { color:#dfeff7; font-size:0.95rem; line-height:1.55; }
+
+/* small floating accent (subtle) */
+.float-accent {
+  position:absolute; width:220px; height:220px; border-radius:50%;
+  filter: blur(40px); opacity:0.12; pointer-events:none; transform: translate(-50%,-50%);
+  mix-blend-mode: screen;
 }
+.accent-a { background: radial-gradient(circle at 30% 30%, #00c6ff, transparent 40%); top:10%; left:5%; }
+.accent-b { background: radial-gradient(circle at 70% 70%, #1de9b6, transparent 40%); top:80%; left:92%; }
 
-.project h3 {
-  color: #1abc9c;
-  margin-bottom: 1rem;
-  font-size: 1.4rem;
+/* ===== Subsection titles ===== */
+.subsection-title { margin-top:2.5rem; margin-bottom:1rem; font-size:1.45rem; color:#1de9b6; border-bottom:1px solid rgba(255,255,255,0.06); padding-bottom:.5rem; }
+
+/* ===== Contact ===== */
+.contact-container { display:flex; flex-direction:column; gap:1rem; margin-top:1.25rem; align-items:center; width:100%; max-width:720px; }
+.contact-item {
+  display:flex; align-items:center; gap:1rem; width:100%;
+  background: rgba(255,255,255,0.05); padding:0.9rem 1rem; border-radius:12px;
+  transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
 }
+.contact-item:hover { transform: translateY(-5px); box-shadow: 0 14px 34px rgba(0,198,255,0.08); background: rgba(255,255,255,0.09); }
+.contact-icon { width:36px; height:36px; flex:0 0 36px; display:inline-flex; align-items:center; justify-content:center; color:#00c6ff; }
+.contact-text { font-size:1.05rem; color:#fff; word-break:break-word; }
 
-.project p {
-  color: #555;
-  line-height: 1.6;
-  font-size: 1.05rem;
-}
+/* ===== Footer ===== */
+footer { padding:2rem 1rem; text-align:center; background: rgba(0,0,0,0.35); margin-top:1.5rem; font-size:0.95rem; }
 
-/* Hover effect for interactivity */
-.project:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-}
-
-/* Responsive grid for larger screens */
-@media (min-width: 900px) {
-  section.fade-in {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-    justify-items: center;
-  }
-
-  section.fade-in h2 {
-    grid-column: 1 / -1;
-  }
-
-  .project {
-    text-align: left;
-    margin: 0;
-  }
+/* ===== Responsive tweaks ===== */
+@media (max-width:720px) {
+  header { padding:0.75rem 1rem; }
+  h2 { font-size:2rem; }
+  .project-grid { gap:1rem; }
+  .subsection-title { font-size:1.2rem; }
+  .project-card { padding:1rem; }
+  section { padding:4rem 1rem; }
 }
