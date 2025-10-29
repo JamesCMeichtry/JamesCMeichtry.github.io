@@ -167,3 +167,24 @@ body.fade-in-active {
   border-radius: 8px;
   margin-top: 20px;
 }
+/* ------------ PAGE FADE + SLIDE TRANSITIONS ------------ */
+body {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+body.fade-in-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* optional: slightly delay header and footer for layered motion */
+header, footer {
+  transition: opacity 0.8s ease 0.1s, transform 0.8s ease 0.1s;
+}
+body:not(.fade-in-active) header,
+body:not(.fade-in-active) footer {
+  opacity: 0;
+  transform: translateY(-10px);
+}
