@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | James Meichtry</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0a0f1c;
+      color: #fff;
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    header {
+      position: fixed;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      z-index: 100;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      color: #00c6ff;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00c6ff;
+    }
+
+    section {
+      padding: 7rem 2rem 4rem;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 2.5rem;
+      color: #00c6ff;
+    }
+
+    /* ===== Updated Project Layout ===== */
+    .project-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      width: 90%;
+      max-width: 1000px;
+      margin: 2rem auto;
+    }
+
+    .project-box {
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-box:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 14px 36px rgba(0,198,255,0.15);
+    }
+
+    .project-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .project-text {
+      flex: 1 1 55%;
+      text-align: left;
+    }
+
+    .project-title {
+      color: #00c6ff;
+      font-size: 1.8rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .project-desc {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: #e6f7ff;
+    }
+
+    .project-image {
+      flex: 1 1 40%;
+      text-align: center;
+    }
+
+    .project-image img {
+      width: 100%;
+      max-width: 360px;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+      transition: transform 0.3s ease;
+    }
+
+    .project-image img:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .project-content { flex-direction: column; text-align: center; }
+      .project-text, .project-image { flex: 1 1 100%; }
+      .project-title { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>James Meichtry</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <h3 class="subsection-title">University Projects</h3>
+    <div class="project-list">
+      <article class="project-box">
+        <div class="project-content">
+          <div class="project-text">
+            <h3 class="project-title">University Project 1</h3>
+            <p class="project-desc">Description for this university project...</p>
+          </div>
+          <div class="project-image">
+            <img src="https://via.placeholder.com/350x220" alt="Project Image">
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <h3 class="subsection-title">CRE Projects</h3>
+    <div class="project-list">
+      <article class="project-box">
+        <div class="project-content">
+          <div class="project-text">
+            <h3 class="project-title">CRE Project 1</h3>
+            <p class="project-desc">Description for this creative project...</p>
+          </div>
+          <div class="project-image">
+            <img src="https://via.placeholder.com/350x220" alt="Project Image">
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+</body>
+</html>
