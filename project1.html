@@ -1,33 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Project One | James Meichtry</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Project One</h1>
+    <h1 class="logo">JM</h1>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+      <a href="index.html">Home</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <section class="project-detail fade-in">
-    <img src="images/project1.jpg" alt="Project One" />
-    <div class="project-description">
-      <h2>Automated Wire Cutter</h2>
-      <p>This Arduino-based automated wire cutter integrates DRV8825 motor drivers and precision stepper motors. It automates wire length measurement and cutting using an LCD interface and encoder control system.</p>
+  <section class="project-detail">
+    <div class="project-content">
+      <h2>Project One</h2>
+      <p>This university project explores automation design through Arduino microcontrollers. The system was engineered to perform precise wire cutting using DRV8825 stepper drivers and custom electronics.</p>
+      <img src="https://via.placeholder.com/700x400?text=Project+One+Image" alt="Project One">
     </div>
   </section>
 
   <footer>
-    <p>© 2025 James Meichtry</p>
+    <p>© 2025 James Meichtry | Portfolio</p>
   </footer>
 </body>
 </html>
