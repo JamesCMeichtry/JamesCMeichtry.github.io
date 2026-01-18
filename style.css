@@ -337,3 +337,40 @@ a:focus-visible {
   outline: 3px solid var(--primary-blue-dark);
   outline-offset: 3px;
 }
+/* ==========================
+   HOME SECTION
+========================== */
+
+.home-section {
+  background: linear-gradient(
+    180deg,
+    #eaf2ff 0%,
+    #f5f9ff 100%
+  );
+  padding: 6rem 0 5rem;
+}
+
+.home-content {
+  text-align: center;
+}
+
+.home-content h1 {
+  font-size: 3rem;
+  color: var(--primary-blue-dark);
+  margin-bottom: 1rem;
+}
+
+.home-subtitle {
+  font-size: 1.2rem;
+  color: #445;
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+}
+
+.home-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
