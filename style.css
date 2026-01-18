@@ -55,6 +55,21 @@ body {
   align-items: center;
 }
 
+/* ===== Scroll Progress Bar ===== */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(
+    90deg,
+    #00c6ff,
+    #1de9b6
+  );
+  z-index: 2000;
+}
+
 .brand-name {
   font-size: 1.2rem;
   font-weight: 600;
@@ -509,4 +524,31 @@ a:focus-visible {
   font-size: 1.05rem;
   line-height: 1.8;
   color: #333;
+}
+
+/* ===== Mobile Navigation ===== */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.8rem;
+    flex-wrap: wrap;
+  }
+
+  .nav-links a {
+    margin-left: 0;
+  }
+
+  .hero-section h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+  }
 }
