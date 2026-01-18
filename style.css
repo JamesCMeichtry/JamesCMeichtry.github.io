@@ -277,3 +277,14 @@ footer {
   border: 2px solid var(--primary-blue-dark);
   color: var(--primary-blue-dark);
 }
+
+.project-image-placeholder {
+  height: 160px;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  background: linear-gradient(
+    135deg,
+    #dbeafe,
+    #bfdbfe
+  );
+}
