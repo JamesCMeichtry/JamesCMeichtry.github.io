@@ -2,57 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Projects | James Meichtry</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header>
+<header class="site-header">
   <div class="container">
-    <h1 class="logo">JM</h1>
+    <h1 class="logo">James Meichtry</h1>
     <nav>
       <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
+      <a href="projects.html" class="active">Projects</a>
       <a href="contact.html">Contact</a>
     </nav>
   </div>
 </header>
 
-<section class="projects">
-  <div class="container">
+<main class="page">
+
+  <section class="page-hero">
     <h2>Projects</h2>
+    <p>A selection of academic and creative technical work.</p>
+  </section>
 
-    <h3>University Projects</h3>
-    <div class="project-grid">
-      <div class="project-card">
-        <img src="https://via.placeholder.com/400x250" alt="Project placeholder">
-        <h4>Project Title</h4>
-        <p>Brief description of the project, tools used, and outcome.</p>
+  <section class="projects-section">
+
+    <h3 class="projects-group-title">University Projects</h3>
+
+    <article class="project-card">
+      <div class="project-text">
+        <h4>Project One</h4>
+        <p>
+          Arduino-based automated wire cutter using stepper motors,
+          DRV8825 drivers, rotary encoder navigation and safety controls.
+        </p>
+        <a href="project1.html" class="project-link">View project →</a>
       </div>
-
-      <div class="project-card">
-        <img src="https://via.placeholder.com/400x250" alt="Project placeholder">
-        <h4>Project Title</h4>
-        <p>Brief description of the project, tools used, and outcome.</p>
+      <div class="project-image">
+        <img src="https://via.placeholder.com/500x300" alt="Project One">
       </div>
-    </div>
+    </article>
 
-    <h3>Creative Retail & Entertainment (CRE)</h3>
-    <div class="project-grid">
-      <div class="project-card">
-        <img src="https://via.placeholder.com/400x250" alt="Project placeholder">
-        <h4>CRE Project</h4>
-        <p>Concept, execution, and impact within a commercial environment.</p>
+    <h3 class="projects-group-title">Creative Retail Entertainment (CRE)</h3>
+
+    <article class="project-card">
+      <div class="project-text">
+        <h4>Project Two</h4>
+        <p>
+          Interactive retail installation exploring embedded systems,
+          lighting control and customer interaction.
+        </p>
+        <a href="project2.html" class="project-link">View project →</a>
       </div>
-    </div>
+      <div class="project-image">
+        <img src="https://via.placeholder.com/500x300" alt="Project Two">
+      </div>
+    </article>
 
-  </div>
-</section>
+  </section>
 
-<footer>
-  <p>© 2026 James Meichtry</p>
+</main>
+
+<footer class="site-footer">
+  <p>© 2025 James Meichtry</p>
 </footer>
 
 <script src="shared.js"></script>
 </body>
 </html>
+
