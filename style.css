@@ -374,3 +374,25 @@ a:focus-visible {
   flex-wrap: wrap;
 }
 
+/* ==========================
+   ABOUT SECTION
+========================== */
+
+.about-section {
+  background-color: #ffffff;
+  padding: 5rem 0;
+}
+
+.about-section h2 {
+  text-align: center;
+  color: var(--primary-blue-dark);
+  margin-bottom: 2rem;
+}
+
+.about-text {
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #333;
+}
