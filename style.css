@@ -303,3 +303,31 @@ footer {
 .project-card {
   animation: fadeUp 0.6s ease forwards;
 }
+/* ==========================
+   MICRO-INTERACTIONS
+========================== */
+
+.btn-primary:hover {
+  background-color: #0f3b8f;
+  transform: translateY(-1px);
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-blue-dark);
+  color: white;
+}
+
+
+
+/* ==========================
+   ACCESSIBILITY & POLISH
+========================== */
+
+a {
+  transition: color 0.2s ease;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--primary-blue-dark);
+  outline-offset: 3px;
+}
