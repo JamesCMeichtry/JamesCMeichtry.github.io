@@ -1,4 +1,4 @@
-/* =========================
+ /* =========================
    GLOBAL RESET & BASE
 ========================= */
 :root {
@@ -169,6 +169,41 @@ section h2 {
 
 .section-header .lead {
   color: #cbd5f5;
+}
+/* ===== Content Sections ===== */
+.content-section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 5rem 1.5rem;
+}
+
+.info-block {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.4rem;
+  border-radius: 12px;
+  margin-top: 1.2rem;
+}
+
+.info-block h3 {
+  color: #00c6ff;
+  margin-bottom: 0.3rem;
+}
+
+.meta {
+  display: block;
+  font-size: 0.85rem;
+  color: #bcd9e6;
+  margin-bottom: 0.5rem;
+}
+
+.skills-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.skills-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
 
