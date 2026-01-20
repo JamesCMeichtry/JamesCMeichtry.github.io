@@ -4,94 +4,152 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About | James Meichtry</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<header class="site-header">
-  <div class="header-inner">
-    <div class="brand">
-      <span class="brand-name">James Meichtry</span>
-      <span class="brand-role">Mechanical Engineering Graduate</span>
-    </div>
+<!-- Optional: progress bar (recommended) -->
+<div class="scroll-progress" aria-hidden="true"></div>
 
-    <nav class="nav-links">
+<header>
+  <div class="header-inner">
+    <h1>James Meichtry</h1>
+    <nav>
       <a href="index.html">Home</a>
       <a href="projects.html">Projects</a>
       <a href="about.html" class="active">About</a>
-      <a href="#cv" class="cv-btn">CV</a>
+      <a href="contact.html">Contact</a>
+      <a class="cv-btn" href="cv.pdf" target="_blank" rel="noopener">Download CV</a>
     </nav>
   </div>
 </header>
 
-<section class="content-section">
-  <h2>Profile</h2>
-  <p class="lead">
-    Aspiring mechanical engineer with a strong foundation in engineering principles,
-    hands-on project experience, and real-world exposure through onsite engineering work.
-    Motivated to learn, collaborate, and deliver practical solutions in professional environments.
-  </p>
-</section>
+<main>
 
-<section class="content-section">
-  <h2>Education</h2>
-  <div class="info-block">
-    <h3>BEng Mechanical Engineering – Loughborough University</h3>
-    <span class="meta">2022 – 2025 | Result: 2:2</span>
-    <p>
-      Key modules include Automated Wire Cutter (Final Year Project), Thermodynamics,
-      Engineering Mathematics, CAD, MATLAB, Fluid Mechanics, Dynamics, and Design of Machine Elements.
-    </p>
-  </div>
+  <section class="reveal">
+    <div class="section-header">
+      <h2>About & CV</h2>
+      <p class="lead">
+        Aspiring mechanical engineer with practical experience in automation,
+        embedded systems, and onsite technical work.
+      </p>
+    </div>
 
-  <div class="info-block">
-    <h3>Dr Challoner’s Grammar School</h3>
-    <span class="meta">2016 – 2021</span>
-    <p>
-      A-Levels: Mathematics (A), Physics (A), Electronics (A)<br>
-      GCSEs: 10 total, including Maths, Physics, and Electronics
-    </p>
-  </div>
-</section>
+    <div class="about-grid">
+      <div class="about-card">
+        <h3>Profile</h3>
+        <p>
+          An aspiring mechanical engineer with a desire to learn, build relationships,
+          and have an impact within the engineering field.
+        </p>
+      </div>
 
-<section class="content-section">
-  <h2>Professional Experience</h2>
+      <div class="about-card">
+        <h3>Core Strengths</h3>
+        <ul class="bullets">
+          <li>Hands-on automation and embedded systems (Arduino, drivers, stepper control)</li>
+          <li>CAD & design workflows (Siemens NX; FEA exposure)</li>
+          <li>Structured problem-solving and onsite safety awareness</li>
+          <li>Clear communication in multi-team environments</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-  <div class="info-block">
-    <h3>Assistant Engineer – Creative Retail Entertainment</h3>
-    <span class="meta">2021 – Present</span>
-    <p>
-      Assisted onsite audio-visual engineers in multi-industry environments.
-      Developed strong safety awareness, organisation skills, and practical problem-solving abilities
-      while working with live systems and time-critical installations.
-    </p>
-  </div>
+  <section class="reveal">
+    <h2>Timeline</h2>
 
-  <div class="info-block">
-    <h3>Café Assistant – Everyone Active</h3>
-    <span class="meta">2022 – 2024</span>
-    <p>
-      Delivered high-quality customer service in fast-paced environments,
-      demonstrating communication skills, teamwork, and reliability.
-    </p>
-  </div>
-</section>
+    <div class="timeline">
 
-<section class="content-section" id="cv">
-  <h2>Skills</h2>
-  <ul class="skills-list">
-    <li>CAD (Siemens NX, FEA, 3D modelling)</li>
-    <li>Embedded Systems & Arduino</li>
-    <li>Engineering Analysis & Problem Solving</li>
-    <li>Project Management & Teamwork</li>
-    <li>Technical Communication</li>
-  </ul>
-</section>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>BEng Mechanical Engineering — Loughborough University</h3>
+          <div class="meta">2022–2025 • Result: 2:2</div>
+          <p>
+            Key modules include Automated Wire Cutter (Final Year Project), Engineering Mathematics,
+            Thermodynamics, CAD, MATLAB, Fluid Mechanics, Dynamics & Vibration, Design of Machine Elements,
+            Electronics and Mechanics of Materials.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Assistant Engineer / Warehouse Supervisor — Creative Retail Entertainment (Reading)</h3>
+          <div class="meta">2024 (Aug) • 2025 (May) – Present</div>
+          <ul class="bullets">
+            <li>Assisted onsite AV engineers; learned safety/organisation in live environments.</li>
+            <li>Worked in multi-industry settings requiring strong communication and coordination.</li>
+            <li>Handled hazards (live wires, machinery) and followed safe onsite practices.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Assistant Engineer — Creative Retail Entertainment (Reading)</h3>
+          <div class="meta">2021 (Jun) – 2021 (Aug)</div>
+          <ul class="bullets">
+            <li>Supported troubleshooting and fixes for audio-visual systems.</li>
+            <li>Built foundations in fault finding and client-focused communication.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>A-Levels & GCSEs — Dr Challoner’s Grammar School</h3>
+          <div class="meta">2016–2021</div>
+          <p>
+            A-Levels: Mathematics (A), Physics (A), Electronics (A).
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="reveal" id="skills">
+    <h2>Skills</h2>
+
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>CAD (Siemens NX)</h3>
+        <p>3D modelling, rendered designs for prototyping, and exposure to finite element analysis.</p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Embedded Systems</h3>
+        <p>Arduino development, stepper control, I2C LCD interfaces, and practical wiring/testing.</p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Project Management</h3>
+        <p>Deadlines, communication, risk awareness, and structuring work to achieve outcomes.</p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Teamwork & Communication</h3>
+        <p>Collaborated in team projects and onsite environments; clear technical communication.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
 
 <footer>
-  © 2025 James Meichtry. All rights reserved.
+  © 2025 James Meichtry
 </footer>
 
+<script src="shared.js"></script>
 </body>
 </html>
+
+
+
+
