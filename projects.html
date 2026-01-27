@@ -3,108 +3,126 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Projects by James Meichtry — University engineering projects and CRE (Creative Retail & Entertainment) technical work, with case studies and highlights.">
   <title>Projects | James Meichtry</title>
+  <meta name="description" content="Projects by James Meichtry — University engineering projects and CRE technical work, with highlights and case studies.">
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header class="site-header">
-  <div class="header-inner">
-    <div class="brand">
-      <span class="brand-name">James Meichtry</span>
-      <span class="brand-role">Mechanical Engineering Graduate</span>
-    </div>
+<div class="scroll-progress" aria-hidden="true"></div>
 
-    <nav class="nav-links">
-      <a href="index.html" class="active">Home</a>
-      <a href="projects.html">Projects</a>
+<header>
+  <div class="header-inner">
+    <h1>James Meichtry</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html" class="active">Projects</a>
       <a href="about.html">About</a>
-      <a href="#cv" class="cv-btn">CV</a>
+      <a href="contact.html">Contact</a>
+      <a class="cv-btn" href="about.html#cv">CV</a>
     </nav>
   </div>
 </header>
 
+<main>
 
-<section>
+  <section class="reveal">
+    <div class="section-header">
+      <h2>Projects</h2>
+      <p class="lead">
+        A selection of academic, technical, and creative projects demonstrating my
+        experience in engineering, automation, and interactive design.
+      </p>
+    </div>
 
-  <div class="section-header">
-    <h2>Projects</h2>
-    <p class="lead">
-      A selection of academic, technical, and creative projects demonstrating my
-      experience in engineering, automation, and interactive design.
-    </p>
-  </div>
+    <!-- UNIVERSITY PROJECTS -->
+    <div class="project-category">
+      <h3>University Projects</h3>
 
-  <!-- UNIVERSITY PROJECTS -->
-  <div class="project-category">
-    <h3>University Projects</h3>
-
-    <div class="project-row">
-      <div class="project-text">
-        <h4>Automated Wire Cutter</h4>
-        <p>
-          Arduino-based precision wire cutting system using stepper motors,
-          DRV8825 drivers, an LCD interface, and emergency-stop integration.
-        </p>
-        <a href="#">View project →</a>
+      <div class="project-row">
+        <div class="project-text">
+          <h4>Automated Wire Cutter</h4>
+          <p>
+            Arduino-based precision wire cutting system using stepper motors,
+            DRV8825 drivers, an LCD interface, and emergency-stop integration.
+          </p>
+          <a href="project1.html">View case study →</a>
+        </div>
+        <div class="project-image">Image placeholder</div>
       </div>
-      <div class="project-image">
-        Image placeholder
+
+      <div class="project-row">
+        <div class="project-text">
+          <h4>Stepper Motor Control System</h4>
+          <p>
+            Testing and control framework for Motech and Sanmotion stepper motors,
+            showcasing microstepping, torque control, and driver configuration.
+          </p>
+          <a href="project2.html">View case study →</a>
+        </div>
+        <div class="project-image">Image placeholder</div>
+      </div>
+
+      <!-- placeholders for future university projects (no broken links) -->
+      <div class="project-row">
+        <div class="project-text">
+          <h4>University Project (Coming Soon)</h4>
+          <p>
+            Placeholder — add your 3rd university project here when ready.
+          </p>
+          <span class="mini-link">Case study coming soon</span>
+        </div>
+        <div class="project-image">Image placeholder</div>
+      </div>
+
+      <div class="project-row">
+        <div class="project-text">
+          <h4>University Project (Coming Soon)</h4>
+          <p>
+            Placeholder — add your 4th university project here when ready.
+          </p>
+          <span class="mini-link">Case study coming soon</span>
+        </div>
+        <div class="project-image">Image placeholder</div>
       </div>
     </div>
 
-    <div class="project-row">
-      <div class="project-text">
-        <h4>Stepper Motor Control System</h4>
-        <p>
-          Testing and control framework for Motech and Sanmotion stepper motors,
-          showcasing microstepping, torque control, and driver configuration.
-        </p>
-        <a href="#">View project →</a>
-      </div>
-      <div class="project-image">
-        Image placeholder
-      </div>
-    </div>
-  </div>
+    <!-- CRE PROJECTS -->
+    <div class="project-category">
+      <h3>Creative Retail & Entertainment (CRE)</h3>
 
-  <!-- CREATIVE / RETAIL / ENTERTAINMENT -->
-  <div class="project-category">
-    <h3>Creative Retail & Entertainment (CRE)</h3>
-
-    <div class="project-row">
-      <div class="project-text">
-        <h4>Music-Responsive Lighting Display</h4>
-        <p>
-          Interactive lighting installation translating audio frequencies into
-          synchronized visual effects for retail and event environments.
-        </p>
-        <a href="#">View project →</a>
-      </div>
-      <div class="project-image">
-        Image placeholder
+      <div class="project-row">
+        <div class="project-text">
+          <h4>Music-Responsive Lighting Display</h4>
+          <p>
+            Interactive lighting installation translating audio frequencies into
+            synchronized visual effects for retail and event environments.
+          </p>
+          <span class="mini-link">Case study coming soon</span>
+        </div>
+        <div class="project-image">Image placeholder</div>
       </div>
     </div>
-  </div>
 
-<section class="reveal">
-  <div class="section-header">
-    <h2>Interested in working together?</h2>
-    <p class="lead">I’m open to opportunities and collaborations — feel free to get in touch.</p>
-    <div class="hero-actions">
-      <a href="contact.html" class="btn-primary">Contact</a>
-      <a href="cv.pdf" class="btn-secondary" target="_blank" rel="noopener">Download CV</a>
+  </section>
+
+  <!-- SINGLE CTA (keep one only) -->
+  <section class="reveal">
+    <div class="cta">
+      <h2>Interested in working together?</h2>
+      <p class="lead">I’m open to graduate roles and opportunities. Feel free to reach out.</p>
+      <div class="cta-actions">
+        <a class="btn-primary" href="contact.html">Contact</a>
+        <a class="btn-secondary" href="about.html#cv">View CV</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-</section>
+</main>
 
-<footer>
-  © 2025 James Meichtry
-</footer>
+<footer>© 2026 James Meichtry</footer>
 
+<script src="shared.js"></script>
 </body>
 </html>
