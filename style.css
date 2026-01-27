@@ -510,3 +510,12 @@ a:focus-visible, button:focus-visible{
   section{ padding-left: 1rem; padding-right: 1rem; }
   .facts{ grid-template-columns: 1fr 1fr; }
 }
+
+
+/* ===== EMERGENCY VISIBILITY OVERRIDE ===== */
+/* Ensures site content is visible even if JS fails */
+
+.reveal {
+  opacity: 1 !important;
+  transform: none !important;
+}
