@@ -1,148 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="James Meichtry — Mechanical Engineering graduate portfolio featuring university projects, embedded systems, and CRE technical work.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>James Meichtry | Portfolio</title>
+  <meta name="description" content="James Meichtry — Mechanical Engineering graduate portfolio showcasing automation, embedded systems, and CRE technical work.">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<div class="scroll-progress"></div>
 
-<header class="site-header">
+<div class="scroll-progress" aria-hidden="true"></div>
+
+<header>
   <div class="header-inner">
-    <div class="brand">
-      <span class="brand-name">James Meichtry</span>
-      <span class="brand-role">Mechanical Engineering Graduate</span>
-    </div>
+    <h1>James Meichtry</h1>
 
-    <nav class="nav-links">
+    <nav>
       <a href="index.html" class="active">Home</a>
       <a href="projects.html">Projects</a>
       <a href="about.html">About</a>
-      <a href="#cv" class="cv-btn">CV</a>
+      <a href="contact.html">Contact</a>
+      <a class="cv-btn" href="about.html#cv">CV</a>
     </nav>
   </div>
 </header>
 
+<main>
 
-<section class="hero-section">
-  <div class="hero-content">
-    <h1>Mechanical Engineering Graduate</h1>
-    <p class="hero-subtitle">
-      Focused on practical engineering solutions, automation systems,
-      and creative technical problem solving.
-    </p>
-
-    <div class="hero-actions">
-      <a href="projects.html" class="btn-primary">View Projects</a>
-      <a href="about.html" class="btn-secondary">About Me</a>
-    </div>
-  </div>
-</section>
-
-
-<section id="about" class="about-section">
-  <div class="container">
-    <h2>About Me</h2>
-
-    <p class="about-text">
-      I am a technically focused graduate with hands-on experience in
-      automation systems, embedded electronics, and interactive digital
-      design. I enjoy bridging engineering and creativity to deliver
-      robust, elegant solutions.
-    </p>
-
-    <p class="about-text">
-      My background includes Arduino-based automation, stepper motor
-      control systems, and front-end development with a strong focus on
-      clean UI, usability, and maintainable code.
-    </p>
-  </div>
-</section>
-
-<section class="reveal">
-  <h2>Featured Projects</h2>
-  <p class="lead">A quick selection — see the Projects page for full details.</p>
-
-  <div class="projects-grid">
-    <div class="project-card">
-      <div class="project-image-placeholder"></div>
-      <h3>Automated Wire Cutter</h3>
-      <p>Arduino-based automation with stepper control and a menu interface.</p>
-      <a href="projects.html" class="btn-secondary">View projects</a>
-    </div>
-
-    <div class="project-card">
-      <div class="project-image-placeholder"></div>
-      <h3>Stepper Control System</h3>
-      <p>Calibration and testing framework using DRV8825 microstepping.</p>
-      <a href="projects.html" class="btn-secondary">View projects</a>
-    </div>
-
-    <div class="project-card">
-      <div class="project-image-placeholder"></div>
-      <h3>CRE Installations</h3>
-      <p>Onsite troubleshooting and delivery for AV and interactive setups.</p>
-      <a href="projects.html" class="btn-secondary">View projects</a>
-    </div>
-  </div>
-</section>
-
-  <div class="projects-grid">
-
-    <div class="project-card">
-      <div class="project-image-placeholder"></div>
-      <h3>Automated Wire Cutting System</h3>
-      <p>
-        Designed and built an Arduino-controlled wire cutting system using
-        stepper motors, drivers, and a menu-based user interface.
+  <!-- HERO -->
+  <section class="hero-section reveal">
+    <div class="hero-content">
+      <h1>Mechanical Engineering Graduate</h1>
+      <p class="hero-subtitle">
+        Focused on practical engineering solutions, automation systems,
+        and creative technical problem solving.
       </p>
-      <span class="project-tag">Embedded Systems</span>
-    </div>
 
-    <div class="project-card">
-      <div class="project-image-placeholder"></div>
-      <h3>Stepper Motor Control Platform</h3>
-      <p>
-        Developed a dual-motor control system using DRV8825 drivers, switches,
-        and LCD feedback for precision control.
+      <div class="hero-actions">
+        <a href="projects.html" class="btn-primary">View Projects</a>
+        <a href="about.html" class="btn-secondary">About Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about-section reveal">
+    <div class="container">
+      <h2>About Me</h2>
+
+      <p class="about-text">
+        I am a technically focused graduate with hands-on experience in
+        automation systems, embedded electronics, and interactive digital
+        design. I enjoy bridging engineering and creativity to deliver
+        robust, elegant solutions.
       </p>
-      <span class="project-tag">Electronics</span>
-    </div>
 
-    <div class="project-card">
-      <div class="project-image-placeholder"></div>
-      <h3>Engineering Data Analysis Tool</h3>
-      <p>
-        Built a data processing and visualisation tool to analyse system
-        performance metrics and optimise outputs.
+      <p class="about-text">
+        My background includes Arduino-based automation, stepper motor
+        control systems, and front-end development with a strong focus on
+        clean UI, usability, and maintainable code.
       </p>
-      <span class="project-tag">Data Analysis</span>
+
+      <div class="hero-actions" style="margin-top: 1.5rem;">
+        <a href="about.html#skills" class="btn-secondary">Skills</a>
+        <a href="about.html#cv" class="btn-primary">CV Timeline</a>
+      </div>
     </div>
+  </section>
 
-    <div class="project-card">
-      <div class="project-image-placeholder"></div>
-      <h3>Technical Portfolio Website</h3>
-      <p>
-        Designed and deployed a responsive portfolio website using HTML, CSS,
-        and GitHub Pages to showcase professional and academic work.
-      </p>
-      <span class="project-tag">Web Development</span>
+  <!-- PROJECT HIGHLIGHTS (ONE ONLY) -->
+  <section class="reveal">
+    <div class="container">
+      <h2>Project Highlights</h2>
+      <p class="lead">A quick selection — see the Projects page for full details.</p>
+
+      <div class="projects-grid">
+        <a class="mini-card" href="project1.html">
+          <div class="img-ph">Image placeholder</div>
+          <h3>Automated Wire Cutter</h3>
+          <p>Arduino automation with stepper control, menu UI and safety logic.</p>
+          <span class="mini-link">View case study →</span>
+        </a>
+
+        <a class="mini-card" href="project2.html">
+          <div class="img-ph">Image placeholder</div>
+          <h3>Stepper Motor Control</h3>
+          <p>Calibration/testing setup using DRV8825 microstepping.</p>
+          <span class="mini-link">View case study →</span>
+        </a>
+
+        <a class="mini-card" href="projects.html">
+          <div class="img-ph">Image placeholder</div>
+          <h3>University + CRE</h3>
+          <p>Browse all work split into University and CRE categories.</p>
+          <span class="mini-link">Open Projects →</span>
+        </a>
+      </div>
     </div>
+  </section>
 
-  </div>
-</div>
+  <!-- CTA -->
+  <section class="reveal">
+    <div class="container">
+      <div class="cta">
+        <h2>Open to opportunities</h2>
+        <p class="lead">If you’d like to discuss roles or projects, feel free to get in touch.</p>
+        <div class="cta-actions">
+          <a class="btn-primary" href="contact.html">Contact</a>
+          <a class="btn-secondary" href="about.html#cv">View CV</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <div class="container">
-    <h3>About Me</h3>
-    <p>
-      Placeholder bio text. This section should summarise who you are, what you specialise in,
-      and what kind of roles or industries you are targeting.
-    </p>
-  </div>
-</section>
+</main>
 
 <footer>
   <p>© 2026 James Meichtry</p>
