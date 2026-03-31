@@ -1,91 +1,56 @@
 (function () {
   'use strict';
-
   var bar = document.querySelector('.scroll-progress');
   function updateProgress() {
     if (!bar) return;
-    var scrollTop = window.scrollY;
-    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    bar.style.width = (docHeight > 0 ? (scrollTop / docHeight) * 100 : 0) + '%';
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
   }
-
   var hdr = document.querySelector('header');
   function updateHeader() {
-    if (!hdr) return;
-    hdr.classList.toggle('scrolled', window.scrollY > 20);
+    if (hdr) hdr.classList.toggle('scrolled', window.scrollY > 24);
   }
-
-  var hamburger = document.querySelector('.hamburger');
-  var mobileNav  = document.querySelector('.mobile-nav');
-
+  var burger = document.querySelector('.hamburger');
+  var mob    = document.querySelector('.mobile-nav');
   function closeMenu() {
-    if (!hamburger || !mobileNav) return;
-    hamburger.classList.remove('open');
-    mobileNav.classList.remove('open');
-    hamburger.setAttribute('aria-expanded', 'false');
+    if (!burger || !mob) return;
+    burger.classList.remove('open');
+    mob.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
   }
-
-  if (hamburger) {
-    hamburger.setAttribute('aria-label', 'Toggle navigation');
-    hamburger.setAttribute('aria-expanded', 'false');
-    hamburger.addEventListener('click', function () {
-      var isOpen = hamburger.classList.toggle('open');
-      if (mobileNav) mobileNav.classList.toggle('open', isOpen);
-      hamburger.setAttribute('aria-expanded', String(isOpen));
-      document.body.style.overflow = isOpen ? 'hidden' : '';
+  if (burger) {
+    burger.setAttribute('aria-expanded', 'false');
+    burger.addEventListener('click', function () {
+      var open = burger.classList.toggle('open');
+      if (mob) mob.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', String(open));
+      document.body.style.overflow = open ? 'hidden' : '';
     });
   }
-
-  if (mobileNav) {
-    mobileNav.querySelectorAll('a').forEach(function (a) {
-      a.addEventListener('click', closeMenu);
-    });
-  }
-
+  if (mob) mob.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', closeMenu); });
   document.addEventListener('click', function (e) {
-    if (!hdr) return;
-    if (!hdr.contains(e.target) && mobileNav && !mobileNav.contains(e.target)) closeMenu();
+    if (hdr && mob && !hdr.contains(e.target) && !mob.contains(e.target)) closeMenu();
   });
-
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') closeMenu();
-  });
-
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMenu(); });
   function initReveal() {
     var els = document.querySelectorAll('.reveal');
     if (!els.length) return;
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('visible'); io.unobserve(en.target); }
       });
-    }, { threshold: 0.1, rootMargin: '0px 0px -36px 0px' });
-    els.forEach(function (el) { observer.observe(el); });
+    }, { threshold: 0.1, rootMargin: '0px 0px -32px 0px' });
+    els.forEach(function (el) { io.observe(el); });
   }
-
-  var ticking = false;
+  var tick = false;
   window.addEventListener('scroll', function () {
-    if (!ticking) {
-      requestAnimationFrame(function () {
-        updateProgress();
-        updateHeader();
-        ticking = false;
-      });
-      ticking = true;
+    if (!tick) {
+      requestAnimationFrame(function () { updateProgress(); updateHeader(); tick = false; });
+      tick = true;
     }
   }, { passive: true });
-
-  function init() {
-    updateProgress();
-    updateHeader();
-    initReveal();
-  }
-
+  function init() { updateProgress(); updateHeader(); initReveal(); }
   document.readyState === 'loading'
-    ? document.addEventListener('DOMContentLoaded', init)
-    : init();
-
+    ? document.addEventListener('DOMContentLoaded', init) : init();
 })();
