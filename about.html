@@ -4,11 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About | James Meichtry</title>
-
-  <meta name="description" content="About James Meichtry — Mechanical Engineering graduate. Education, onsite CRE engineering experience, and key technical skills.">
-
+  <meta name="description" content="About James Meichtry — Mechanical Engineering graduate. Education, CRE experience, and technical skills.">
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -24,106 +21,119 @@
       <a href="contact.html">Contact</a>
       <a class="cv-btn" href="cv.pdf" target="_blank" rel="noopener">CV</a>
     </nav>
+    <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
+
+<nav class="mobile-nav" aria-label="Mobile navigation">
+  <a href="index.html">Home</a>
+  <a href="projects.html">Projects</a>
+  <a href="about.html" class="active">About</a>
+  <a href="contact.html">Contact</a>
+  <a class="cv-btn" href="cv.pdf" target="_blank" rel="noopener">Download CV</a>
+</nav>
 
 <main>
 
   <section class="reveal">
-    <div class="section-header">
-      <h2>About</h2>
-      <p class="lead">
-        Mechanical Engineering graduate with hands-on experience in embedded systems,
-        automation, and onsite CRE technical work.
-      </p>
+    <div class="section-inner" style="max-width:1100px;margin:0 auto;">
+      <div class="section-header">
+        <h2>About</h2>
+        <p>Mechanical Engineering graduate with hands-on experience in embedded systems, automation, and onsite CRE technical work.</p>
+      </div>
     </div>
   </section>
 
   <section class="reveal">
-    <h2>Education</h2>
-    <div class="about-grid">
-      <div class="about-card">
-        <h3>BEng Mechanical Engineering — Loughborough University</h3>
-        <p class="meta">2022–2025 • Result: 2:2</p>
-        <p>
-          Key modules: final year automated wire cutter project, CAD, MATLAB, thermodynamics,
-          fluid mechanics, dynamics & vibration.
-        </p>
-      </div>
-
-      <div class="about-card">
-        <h3>Dr Challoner’s Grammar School</h3>
-        <p class="meta">2016–2021</p>
-        <p>
-          A-levels: Maths (A), Physics (A), Electronics (A).
-          GCSEs: 10 including Maths, Physics, Electronics.
-        </p>
+    <div class="section-inner" style="max-width:1100px;margin:0 auto;">
+      <div class="section-label">Education</div>
+      <h2 class="section-title">Academic Background</h2>
+      <div class="about-grid">
+        <div class="about-card">
+          <h3>BEng Mechanical Engineering — Loughborough University</h3>
+          <span class="meta">2022–2025 &nbsp;·&nbsp; Result: 2:2</span>
+          <p>Key modules: automated wire cutter (final year project), CAD, MATLAB, thermodynamics, fluid mechanics, dynamics &amp; vibration.</p>
+        </div>
+        <div class="about-card">
+          <h3>Dr Challoner's Grammar School</h3>
+          <span class="meta">2016–2021</span>
+          <p>A-levels: Maths (A), Physics (A), Electronics (A).<br>GCSEs: 10 including Maths, Physics, Electronics.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="reveal" id="cv">
-    <h2>Experience</h2>
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h3>Assistant Engineer / Warehouse Supervisor — CRE</h3>
-          <p class="meta">2024 (Aug) • 2025 (May) – Present</p>
-          <ul class="bullets">
-            <li>Assisted onsite engineers; improved safety awareness and organisation.</li>
-            <li>Worked across multi-industry teams requiring strong communication.</li>
-            <li>Troubleshot technical issues in live environments.</li>
-          </ul>
-        </div>
-      </div>
+  <section class="reveal" id="cv" style="background:var(--bg-alt);">
+    <div class="section-inner" style="max-width:1100px;margin:0 auto;">
+      <div class="section-label">Experience</div>
+      <h2 class="section-title">Work History</h2>
+      <div class="timeline">
 
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h3>Assistant Engineer — CRE</h3>
-          <p class="meta">2021 (Jun) – 2021 (Aug)</p>
-          <ul class="bullets">
-            <li>Supported fault finding and troubleshooting on AV systems.</li>
-            <li>Built experience communicating fixes and changes clearly.</li>
-          </ul>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Assistant Engineer / Warehouse Supervisor — CRE</h3>
+            <span class="meta">Aug 2024 · May 2025 – Present</span>
+            <ul class="bullets">
+              <li>Assisted onsite engineers across multi-industry AV installations.</li>
+              <li>Improved safety awareness, organisation and team communication.</li>
+              <li>Troubleshot technical faults in live, time-critical environments.</li>
+            </ul>
+          </div>
         </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Assistant Engineer — CRE</h3>
+            <span class="meta">Jun 2021 – Aug 2021</span>
+            <ul class="bullets">
+              <li>Supported fault finding and troubleshooting on AV systems.</li>
+              <li>Developed clear communication of fixes and technical changes.</li>
+            </ul>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
   <section class="reveal" id="skills">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-      <div class="skill-card">
-        <h3>CAD (Siemens NX)</h3>
-        <p>3D modelling, rendered designs, prototyping and exposure to FEA.</p>
-      </div>
-
-      <div class="skill-card">
-        <h3>Embedded Systems</h3>
-        <p>Arduino, stepper control, DRV8825 configuration, LCD interfaces.</p>
-      </div>
-
-      <div class="skill-card">
-        <h3>Project Management</h3>
-        <p>Deadlines, risk awareness, clear communication, structured execution.</p>
-      </div>
-
-      <div class="skill-card">
-        <h3>Teamwork</h3>
-        <p>Collaborative problem-solving in group projects and onsite teams.</p>
+    <div class="section-inner" style="max-width:1100px;margin:0 auto;">
+      <div class="section-label">Skills</div>
+      <h2 class="section-title">Technical Strengths</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>CAD — Siemens NX</h3>
+          <p>3D modelling, rendered designs, prototyping and exposure to FEA analysis.</p>
+        </div>
+        <div class="skill-card">
+          <h3>Embedded Systems</h3>
+          <p>Arduino, stepper motor control, DRV8825 drivers, LCD interfaces and C++ logic.</p>
+        </div>
+        <div class="skill-card">
+          <h3>Project Management</h3>
+          <p>Structured execution, deadline management, risk awareness and clear documentation.</p>
+        </div>
+        <div class="skill-card">
+          <h3>Teamwork &amp; Communication</h3>
+          <p>Collaborative problem-solving across group projects and live onsite engineering teams.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="reveal">
-    <div class="cta">
-      <h2>Want to chat?</h2>
-      <p class="lead">If you’d like to discuss opportunities or projects, feel free to reach out.</p>
-      <div class="cta-actions">
-        <a class="btn-primary" href="contact.html">Contact</a>
-        <a class="btn-secondary" href="projects.html">View Projects</a>
+    <div class="section-inner" style="max-width:1100px;margin:0 auto;">
+      <div class="cta">
+        <h2>Want to chat?</h2>
+        <p class="lead">Open to graduate roles, engineering projects and new opportunities.</p>
+        <div class="cta-actions">
+          <a class="btn-primary" href="contact.html">Contact Me</a>
+          <a class="btn-secondary" href="projects.html">View Projects</a>
+        </div>
       </div>
     </div>
   </section>
@@ -131,7 +141,6 @@
 </main>
 
 <footer>© 2026 James Meichtry</footer>
-
 <script src="shared.js"></script>
 </body>
 </html>
