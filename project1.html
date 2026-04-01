@@ -3,12 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Project One | James Meichtry</title>
-
-  <meta name="description" content="Project 1 case study — Automated Wire Cutter. Arduino-based automation using stepper motors, DRV8825 drivers, UI controls, and safety logic.">
-
+  <title>Automated Wire Cutter | James Meichtry</title>
+  <meta name="description" content="Case study — Automated Wire Cutter. Arduino-based automation using stepper motors, DRV8825 drivers, UI controls and safety logic.">
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -24,24 +21,34 @@
       <a href="contact.html">Contact</a>
       <a class="cv-btn" href="cv.pdf" target="_blank" rel="noopener">CV</a>
     </nav>
+    <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
+
+<nav class="mobile-nav" aria-label="Mobile navigation">
+  <a href="index.html">Home</a>
+  <a href="projects.html" class="active">Projects</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a class="cv-btn" href="cv.pdf" target="_blank" rel="noopener">Download CV</a>
+</nav>
 
 <main>
 
   <section class="reveal">
-    <div class="section-header">
-      <h2>Project One</h2>
-      <p class="lead">
-        Placeholder case study — replace title/details later. This layout is the final format.
-      </p>
-    </div>
-
-    <div class="facts">
-      <div><strong>Type</strong><span>University</span></div>
-      <div><strong>Tools</strong><span>Arduino, DRV8825, Stepper Motors</span></div>
-      <div><strong>Focus</strong><span>Automation, Safety, UI</span></div>
-      <div><strong>Status</strong><span>Complete</span></div>
+    <div class="section-inner" style="max-width:1100px;margin:0 auto;">
+      <div class="section-header">
+        <h2>Automated Wire Cutter</h2>
+        <p>Arduino-based automation system — final year university project.</p>
+      </div>
+      <div class="facts">
+        <div><strong>Type</strong><span>University</span></div>
+        <div><strong>Tools</strong><span>Arduino, DRV8825, Stepper Motors</span></div>
+        <div><strong>Focus</strong><span>Automation, Safety, UI</span></div>
+        <div><strong>Status</strong><span>Complete</span></div>
+      </div>
     </div>
   </section>
 
@@ -50,35 +57,37 @@
       <h3>Problem</h3>
       <p>Describe the real-world or academic need. What were you trying to automate or improve?</p>
     </div>
-
     <div class="case-card">
       <h3>Approach</h3>
-      <p>Summarise your method: design, testing, iteration, safety, constraints, and decisions.</p>
+      <p>Summarise your method: design, testing, iteration, safety, constraints and key decisions.</p>
     </div>
-
     <div class="case-card">
       <h3>Outcome</h3>
       <p>Quantify results if possible. What improved? What did you learn? What would you do next?</p>
     </div>
   </section>
 
-  <section class="reveal">
-    <h2>Gallery</h2>
-    <div class="gallery">
-      <div class="img-ph">Image placeholder</div>
-      <div class="img-ph">Image placeholder</div>
-      <div class="img-ph">Image placeholder</div>
+  <section class="reveal" style="background:var(--bg-alt);">
+    <div class="section-inner" style="max-width:1100px;margin:0 auto;">
+      <h2 class="section-title">Gallery</h2>
+      <div class="gallery">
+        <div class="img-ph">Image placeholder</div>
+        <div class="img-ph">Image placeholder</div>
+        <div class="img-ph">Image placeholder</div>
+      </div>
+      <a class="back-link" href="projects.html">← Back to Projects</a>
     </div>
-    <a class="back-link" href="projects.html">← Back to Projects</a>
   </section>
 
   <section class="reveal">
-    <div class="cta">
-      <h2>Interested in working together?</h2>
-      <p class="lead">I’m open to graduate roles and opportunities. Feel free to reach out.</p>
-      <div class="cta-actions">
-        <a class="btn-primary" href="contact.html">Contact</a>
-        <a class="btn-secondary" href="about.html#cv">View CV</a>
+    <div class="section-inner" style="max-width:1100px;margin:0 auto;">
+      <div class="cta">
+        <h2>Interested in working together?</h2>
+        <p class="lead">Open to graduate roles and engineering opportunities.</p>
+        <div class="cta-actions">
+          <a class="btn-primary" href="contact.html">Contact Me</a>
+          <a class="btn-secondary" href="about.html#cv">View CV</a>
+        </div>
       </div>
     </div>
   </section>
@@ -86,7 +95,6 @@
 </main>
 
 <footer>© 2026 James Meichtry</footer>
-
 <script src="shared.js"></script>
 </body>
 </html>
