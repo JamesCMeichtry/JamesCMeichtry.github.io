@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Automated Wire Cutter | James Meichtry</title>
-  <meta name="description" content="Case study — Automated Wire Cutter. Arduino-based automation using stepper motors, DRV8825 drivers, UI controls and safety logic.">
+  <meta name="description" content="Case study — Automated Wire Cutter. Arduino-based automation using stepper motors, DRV8825 drivers, an LCD UI and safety logic.">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -37,56 +37,98 @@
 
 <main>
 
+  <!-- HERO / TITLE -->
   <section class="reveal">
-    <div class="section-inner" style="max-width:1100px;margin:0 auto;">
+    <div class="section-inner">
       <div class="section-header">
+        <span class="project-tag">Embedded Systems · Final-Year Project</span>
         <h2>Automated Wire Cutter</h2>
-        <p>Arduino-based automation system — final year university project.</p>
+        <p>
+          An Arduino-driven rig that measures, feeds and cuts wire to a programmed
+          length with repeatable precision — replacing a slow manual process with a
+          menu-driven machine.
+        </p>
       </div>
+    </div>
+  </section>
+
+  <!-- QUICK FACTS -->
+  <section class="reveal">
+    <div class="section-inner">
       <div class="facts">
-        <div><strong>Type</strong><span>University</span></div>
-        <div><strong>Tools</strong><span>Arduino, DRV8825, Stepper Motors</span></div>
-        <div><strong>Focus</strong><span>Automation, Safety, UI</span></div>
+        <div><strong>Year</strong><span>2024 – 2025</span></div>
+        <div><strong>Role</strong><span>Design &amp; Build</span></div>
+        <div><strong>Type</strong><span>University FYP</span></div>
         <div><strong>Status</strong><span>Complete</span></div>
       </div>
     </div>
   </section>
 
-  <section class="reveal case-grid">
-    <div class="case-card">
-      <h3>Problem</h3>
-      <p>Describe the real-world or academic need. What were you trying to automate or improve?</p>
-    </div>
-    <div class="case-card">
-      <h3>Approach</h3>
-      <p>Summarise your method: design, testing, iteration, safety, constraints and key decisions.</p>
-    </div>
-    <div class="case-card">
-      <h3>Outcome</h3>
-      <p>Quantify results if possible. What improved? What did you learn? What would you do next?</p>
-    </div>
-  </section>
-
-  <section class="reveal" style="background:var(--bg-alt);">
-    <div class="section-inner" style="max-width:1100px;margin:0 auto;">
-      <h2 class="section-title">Gallery</h2>
-      <div class="gallery">
-        <div class="img-ph">Image placeholder</div>
-        <div class="img-ph">Image placeholder</div>
-        <div class="img-ph">Image placeholder</div>
-      </div>
-      <a class="back-link" href="projects.html">← Back to Projects</a>
-    </div>
-  </section>
-
+  <!-- IMAGE -->
   <section class="reveal">
-    <div class="section-inner" style="max-width:1100px;margin:0 auto;">
+    <div class="section-inner">
+      <div class="project-image" style="border-radius:var(--radius); min-height:340px;">Image placeholder</div>
+    </div>
+  </section>
+
+  <!-- OVERVIEW + APPROACH -->
+  <section class="reveal">
+    <div class="section-inner">
+      <div class="section-label">Overview</div>
+      <h2 class="section-title">What it does</h2>
+      <p class="about-text">
+        The wire cutter automates a repetitive, error-prone task. An operator enters a
+        length and quantity on the LCD menu, and the machine feeds and cuts each piece
+        accurately — with an emergency-stop and safety interlock so it halts instantly
+        and predictably.
+      </p>
+
+      <div class="case-grid" style="padding:0;">
+        <div class="case-card">
+          <h3>Motion &amp; Drivers</h3>
+          <p>Stepper motors with DRV8825 microstepping drivers deliver smooth, accurate feed and cut motion.</p>
+        </div>
+        <div class="case-card">
+          <h3>Operator UI</h3>
+          <p>A menu-driven LCD interface lets an operator set length and quantity without touching code.</p>
+        </div>
+        <div class="case-card">
+          <h3>Safety Logic</h3>
+          <p>An emergency-stop and interlock bring the machine to a controlled, predictable halt.</p>
+        </div>
+        <div class="case-card">
+          <h3>Calibration</h3>
+          <p>Tuned acceleration and step calibration balance cutting speed against accuracy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOOLS -->
+  <section class="reveal">
+    <div class="section-inner">
+      <div class="section-label">Tools &amp; Tech</div>
+      <h2 class="section-title">Built with</h2>
+      <div class="facts">
+        <div><strong>Control</strong><span>Arduino / C++</span></div>
+        <div><strong>Drivers</strong><span>DRV8825</span></div>
+        <div><strong>Motion</strong><span>Stepper Motors</span></div>
+        <div><strong>Interface</strong><span>LCD Menu</span></div>
+        <div><strong>Design</strong><span>CAD</span></div>
+      </div>
+      <a href="projects.html" class="back-link">← Back to Projects</a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="reveal">
+    <div class="section-inner">
       <div class="cta">
-        <h2>Interested in working together?</h2>
-        <p class="lead">Open to graduate roles and engineering opportunities.</p>
+        <h2>Want the full details?</h2>
+        <p class="lead">Happy to talk through the design, code and testing in more depth.</p>
         <div class="cta-actions">
-          <a class="btn-primary" href="contact.html">Contact Me</a>
-          <a class="btn-secondary" href="about.html#cv">View CV</a>
+          <a class="btn-primary" href="contact.html">Get in touch</a>
+          <a class="btn-secondary" href="projects.html">More Projects</a>
         </div>
       </div>
     </div>
@@ -95,6 +137,7 @@
 </main>
 
 <footer>© 2026 James Meichtry</footer>
+
 <script src="shared.js"></script>
 </body>
 </html>
