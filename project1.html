@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Automated Wire Cutter | James Meichtry</title>
-  <meta name="description" content="Case study — Automated Wire Cutter. Arduino-based automation using stepper motors, DRV8825 drivers, an LCD UI and safety logic.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | James Meichtry</title>
+  <meta name="description" content="Projects by James Meichtry — University engineering projects and CRE technical work, with highlights and case studies.">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -37,98 +37,101 @@
 
 <main>
 
-  <!-- HERO / TITLE -->
   <section class="reveal">
     <div class="section-inner">
       <div class="section-header">
-        <span class="project-tag">Embedded Systems · Final-Year Project</span>
-        <h2>Automated Wire Cutter</h2>
-        <p>
-          An Arduino-driven rig that measures, feeds and cuts wire to a programmed
-          length with repeatable precision — replacing a slow manual process with a
-          menu-driven machine.
+        <h2>Projects</h2>
+        <p class="lead">
+          A selection of academic, technical, and creative projects demonstrating my
+          experience in engineering, automation, and interactive design.
         </p>
       </div>
-    </div>
-  </section>
 
-  <!-- QUICK FACTS -->
-  <section class="reveal">
-    <div class="section-inner">
-      <div class="facts">
-        <div><strong>Year</strong><span>2024 – 2025</span></div>
-        <div><strong>Role</strong><span>Design &amp; Build</span></div>
-        <div><strong>Type</strong><span>University FYP</span></div>
-        <div><strong>Status</strong><span>Complete</span></div>
+      <!-- UNIVERSITY PROJECTS -->
+      <div class="project-category">
+        <h3>University Projects</h3>
+
+        <div class="project-row">
+          <div class="project-text">
+            <h4>Automated Wire Cutter &amp; Stripper</h4>
+            <p>
+              My final-year project (Module 23WSC325): a compact, low-cost machine that
+              automates wire feeding, cutting and stripping. Built around an Arduino Uno
+              with twin DRV8825-driven stepper axes, a rotary-encoder and LCD interface,
+              and a milled-aluminium and 3D-printed chassis — feeding accurate to ±2 mm
+              across 0.5–4.0 mm² wire.
+            </p>
+            <a href="project1.html">View case study →</a>
+          </div>
+          <div class="project-image">
+            <img src="images/wirecutter-cad.png"
+                 alt="CAD render of the automated wire cutter and stripper"
+                 style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:1;"
+                 onerror="this.style.display='none'">
+            <span style="position:relative; z-index:0;">Image placeholder</span>
+          </div>
+        </div>
+
+        <div class="project-row">
+          <div class="project-text">
+            <h4>Stepper Motor Control System</h4>
+            <p>
+              Testing and control framework for Sanmotion and Motech stepper motors —
+              matching each motor to a DRV8825 driver, setting current limits by tuning
+              VREF, and calibrating microstepping and step-per-mm resolution for smooth,
+              accurate motion.
+            </p>
+            <a href="project2.html">View case study →</a>
+          </div>
+          <div class="project-image">Image placeholder</div>
+        </div>
+
+        <div class="project-row">
+          <div class="project-text">
+            <h4>University Project (Coming Soon)</h4>
+            <p>Placeholder — add your 3rd university project here when ready.</p>
+            <span class="mini-link">Case study coming soon</span>
+          </div>
+          <div class="project-image">Image placeholder</div>
+        </div>
+
+        <div class="project-row">
+          <div class="project-text">
+            <h4>University Project (Coming Soon)</h4>
+            <p>Placeholder — add your 4th university project here when ready.</p>
+            <span class="mini-link">Case study coming soon</span>
+          </div>
+          <div class="project-image">Image placeholder</div>
+        </div>
+      </div>
+
+      <!-- CRE PROJECTS -->
+      <div class="project-category">
+        <h3>Creative Retail &amp; Entertainment (CRE)</h3>
+
+        <div class="project-row">
+          <div class="project-text">
+            <h4>Music-Responsive Lighting Display</h4>
+            <p>
+              Interactive lighting installation translating audio frequencies into
+              synchronized visual effects for retail and event environments.
+            </p>
+            <span class="mini-link">Case study coming soon</span>
+          </div>
+          <div class="project-image">Image placeholder</div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- IMAGE -->
-  <section class="reveal">
-    <div class="section-inner">
-      <div class="project-image" style="border-radius:var(--radius); min-height:340px;">Image placeholder</div>
-    </div>
-  </section>
-
-  <!-- OVERVIEW + APPROACH -->
-  <section class="reveal">
-    <div class="section-inner">
-      <div class="section-label">Overview</div>
-      <h2 class="section-title">What it does</h2>
-      <p class="about-text">
-        The wire cutter automates a repetitive, error-prone task. An operator enters a
-        length and quantity on the LCD menu, and the machine feeds and cuts each piece
-        accurately — with an emergency-stop and safety interlock so it halts instantly
-        and predictably.
-      </p>
-
-      <div class="case-grid" style="padding:0;">
-        <div class="case-card">
-          <h3>Motion &amp; Drivers</h3>
-          <p>Stepper motors with DRV8825 microstepping drivers deliver smooth, accurate feed and cut motion.</p>
-        </div>
-        <div class="case-card">
-          <h3>Operator UI</h3>
-          <p>A menu-driven LCD interface lets an operator set length and quantity without touching code.</p>
-        </div>
-        <div class="case-card">
-          <h3>Safety Logic</h3>
-          <p>An emergency-stop and interlock bring the machine to a controlled, predictable halt.</p>
-        </div>
-        <div class="case-card">
-          <h3>Calibration</h3>
-          <p>Tuned acceleration and step calibration balance cutting speed against accuracy.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TOOLS -->
-  <section class="reveal">
-    <div class="section-inner">
-      <div class="section-label">Tools &amp; Tech</div>
-      <h2 class="section-title">Built with</h2>
-      <div class="facts">
-        <div><strong>Control</strong><span>Arduino / C++</span></div>
-        <div><strong>Drivers</strong><span>DRV8825</span></div>
-        <div><strong>Motion</strong><span>Stepper Motors</span></div>
-        <div><strong>Interface</strong><span>LCD Menu</span></div>
-        <div><strong>Design</strong><span>CAD</span></div>
-      </div>
-      <a href="projects.html" class="back-link">← Back to Projects</a>
-    </div>
-  </section>
-
-  <!-- CTA -->
   <section class="reveal">
     <div class="section-inner">
       <div class="cta">
-        <h2>Want the full details?</h2>
-        <p class="lead">Happy to talk through the design, code and testing in more depth.</p>
+        <h2>Interested in working together?</h2>
+        <p class="lead">I'm open to graduate roles and opportunities. Feel free to reach out.</p>
         <div class="cta-actions">
-          <a class="btn-primary" href="contact.html">Get in touch</a>
-          <a class="btn-secondary" href="projects.html">More Projects</a>
+          <a class="btn-primary" href="contact.html">Contact</a>
+          <a class="btn-secondary" href="about.html#cv">View CV</a>
         </div>
       </div>
     </div>
