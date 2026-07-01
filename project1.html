@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Automated Wire Cutter | James Meichtry</title>
-  <meta name="description" content="Case study — Automated Wire Cutter. Arduino-based automation using stepper motors, DRV8825 drivers, UI controls and safety logic.">
+  <title>Automated Wire Cutter &amp; Stripper | James Meichtry</title>
+  <meta name="description" content="Final-year project case study — an automated wire cutter and stripper. Arduino Uno control, twin DRV8825-driven stepper motors, rotary-encoder + LCD interface, ±2 mm feed accuracy.">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -37,56 +37,162 @@
 
 <main>
 
+  <!-- TITLE -->
   <section class="reveal">
-    <div class="section-inner" style="max-width:1100px;margin:0 auto;">
+    <div class="section-inner">
       <div class="section-header">
-        <h2>Automated Wire Cutter</h2>
-        <p>Arduino-based automation system — final year university project.</p>
-      </div>
-      <div class="facts">
-        <div><strong>Type</strong><span>University</span></div>
-        <div><strong>Tools</strong><span>Arduino, DRV8825, Stepper Motors</span></div>
-        <div><strong>Focus</strong><span>Automation, Safety, UI</span></div>
-        <div><strong>Status</strong><span>Complete</span></div>
+        <span class="project-tag">Embedded Systems · Final-Year Project</span>
+        <h2>Automated Wire Cutter &amp; Stripper</h2>
+        <p>
+          A compact, low-cost machine that automates wire feeding, cutting and
+          stripping for small workshops and educational use — built around an
+          Arduino Uno with twin stepper-driven axes and a menu-driven interface.
+        </p>
       </div>
     </div>
   </section>
 
-  <section class="reveal case-grid">
-    <div class="case-card">
-      <h3>Problem</h3>
-      <p>Describe the real-world or academic need. What were you trying to automate or improve?</p>
-    </div>
-    <div class="case-card">
-      <h3>Approach</h3>
-      <p>Summarise your method: design, testing, iteration, safety, constraints and key decisions.</p>
-    </div>
-    <div class="case-card">
-      <h3>Outcome</h3>
-      <p>Quantify results if possible. What improved? What did you learn? What would you do next?</p>
-    </div>
-  </section>
-
-  <section class="reveal" style="background:var(--bg-alt);">
-    <div class="section-inner" style="max-width:1100px;margin:0 auto;">
-      <h2 class="section-title">Gallery</h2>
-      <div class="gallery">
-        <div class="img-ph">Image placeholder</div>
-        <div class="img-ph">Image placeholder</div>
-        <div class="img-ph">Image placeholder</div>
-      </div>
-      <a class="back-link" href="projects.html">← Back to Projects</a>
-    </div>
-  </section>
-
+  <!-- QUICK FACTS -->
   <section class="reveal">
-    <div class="section-inner" style="max-width:1100px;margin:0 auto;">
+    <div class="section-inner">
+      <div class="facts">
+        <div><strong>Year</strong><span>2024 – 2025</span></div>
+        <div><strong>Type</strong><span>Individual FYP</span></div>
+        <div><strong>Role</strong><span>Design, Build &amp; Test</span></div>
+        <div><strong>Feed Accuracy</strong><span>±2 mm</span></div>
+        <div><strong>Wire Range</strong><span>0.5 – 4.0 mm²</span></div>
+        <div><strong>Status</strong><span>Working Prototype</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMAGE -->
+  <section class="reveal">
+    <div class="section-inner">
+      <div class="project-image" style="border-radius:var(--radius); min-height:340px;">Image placeholder — add build photo</div>
+    </div>
+  </section>
+
+  <!-- OVERVIEW -->
+  <section class="reveal">
+    <div class="section-inner">
+      <div class="section-label">Overview</div>
+      <h2 class="section-title">The problem &amp; the brief</h2>
+      <p class="about-text">
+        Preparing large quantities of cut-and-stripped wire by hand is slow, tiring
+        and inconsistent — and commercial machines that solve it are typically either
+        very expensive or too large for small workshops and teaching labs. The brief
+        was to close that gap with an affordable, compact alternative.
+      </p>
+      <p class="about-text">
+        I set four objectives at the outset: automate feeding and stripping with
+        repeatable accuracy; handle a range of wire sizes from 0.5 mm² to 4.0 mm²;
+        provide a simple interface for setting length and batch quantity; and base the
+        controller on an Arduino Uno to keep it low-cost and accessible.
+      </p>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="reveal">
+    <div class="section-inner">
+      <div class="section-label">Design</div>
+      <h2 class="section-title">How it works</h2>
+      <div class="case-grid" style="padding:0;">
+        <div class="case-card">
+          <h3>Wire Feeding</h3>
+          <p>A stepper motor drives a lower roller while a spring-loaded upper roller keeps constant pressure on the wire. Feed length is set by counting calibrated motor pulses, tuned against a measured 100 steps/mm.</p>
+        </div>
+        <div class="case-card">
+          <h3>Cutting &amp; Stripping</h3>
+          <p>Rather than a servo, a leadscrew-driven stepper moves the blade vertically for controlled, repeatable motion — simpler mechanically while still giving fine control over cut depth.</p>
+        </div>
+        <div class="case-card">
+          <h3>Operator Interface</h3>
+          <p>A rotary encoder with a push-button sets wire length and number of cuts, and an LCD gives live feedback — so the machine can be run without touching any code.</p>
+        </div>
+        <div class="case-card">
+          <h3>Motion Control</h3>
+          <p>Two DRV8825 drivers handle the feed and cut axes from the Arduino, using step/direction signals and microstepping for smoother, more precise movement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENGINEERING DETAIL -->
+  <section class="reveal">
+    <div class="section-inner">
+      <div class="section-label">Engineering Detail</div>
+      <h2 class="section-title">Under the hood</h2>
+      <p class="about-text">
+        The drive hardware was chosen by checking the SANMOTION F2 (SF2422-10B41)
+        and Motech steppers against the DRV8825 driver: a 2-phase bipolar motor at
+        24&nbsp;V and 1&nbsp;A/phase, comfortably inside the driver's 8.2–45&nbsp;V
+        range and ~1.5&nbsp;A/phase (uncooled) capability. Each driver's current limit
+        was set by measuring and tuning VREF — 0.5&nbsp;V for the 1&nbsp;A Sanmotion and
+        0.665&nbsp;V for the 1.33&nbsp;A Motech — for reliable torque without overheating.
+      </p>
+
+      <div class="facts">
+        <div><strong>Controller</strong><span>Arduino Uno</span></div>
+        <div><strong>Drivers</strong><span>2 × DRV8825</span></div>
+        <div><strong>Motors</strong><span>SANMOTION F2 · Motech</span></div>
+        <div><strong>Supply</strong><span>24 V DC</span></div>
+        <div><strong>Resolution</strong><span>100 steps/mm</span></div>
+        <div><strong>Interface</strong><span>Rotary Encoder + LCD</span></div>
+        <div><strong>Library</strong><span>AccelStepper</span></div>
+        <div><strong>Manufacture</strong><span>CNC Alu + PLA (FFF)</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section class="reveal">
+    <div class="section-inner">
+      <div class="section-label">Results</div>
+      <h2 class="section-title">What it achieved</h2>
+      <p class="about-text">
+        The finished prototype reliably automated feeding and cutting. Feed length was
+        accurate to within ±2&nbsp;mm across every wire size tested, and the operator
+        interface made setting up a batch quick and repeatable. Stripping was partially
+        successful: the blade consistently scored the insulation but couldn't always
+        pull it clear on tougher wires — a torque limitation on the cutter axis rather
+        than a flaw in the approach.
+      </p>
+      <ul class="bullets">
+        <li>Feeding repeatable to ±2 mm across 0.5–4.0 mm² wire.</li>
+        <li>Menu-driven length and batch-quantity control with live LCD feedback.</li>
+        <li>Each subsystem validated independently before full integration.</li>
+        <li>Stripping limited by cutter-axis torque and blade geometry on thick insulation.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- REFLECTION -->
+  <section class="reveal">
+    <div class="section-inner">
+      <div class="section-label">Reflection</div>
+      <h2 class="section-title">What I'd do next</h2>
+      <p class="about-text">
+        The biggest lesson was how much small design choices — clamping force, motor
+        timing, mounting stiffness — decide whether an automated system is actually
+        repeatable. With more time I'd fit a higher-torque cutter motor, revisit the
+        blade geometry, stiffen the blade mount, and add a length sensor to close the
+        loop on feed and cut accuracy.
+      </p>
+      <a href="projects.html" class="back-link">← Back to Projects</a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="reveal">
+    <div class="section-inner">
       <div class="cta">
-        <h2>Interested in working together?</h2>
-        <p class="lead">Open to graduate roles and engineering opportunities.</p>
+        <h2>Want to talk through it?</h2>
+        <p class="lead">Happy to go deeper on the design, the control code or the testing.</p>
         <div class="cta-actions">
-          <a class="btn-primary" href="contact.html">Contact Me</a>
-          <a class="btn-secondary" href="about.html#cv">View CV</a>
+          <a class="btn-primary" href="contact.html">Get in touch</a>
+          <a class="btn-secondary" href="projects.html">More Projects</a>
         </div>
       </div>
     </div>
@@ -95,6 +201,7 @@
 </main>
 
 <footer>© 2026 James Meichtry</footer>
+
 <script src="shared.js"></script>
 </body>
 </html>
