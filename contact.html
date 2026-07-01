@@ -4,11 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact | James Meichtry</title>
-
   <meta name="description" content="Contact James Meichtry — Mechanical Engineering graduate. Get in touch for roles, collaborations, and engineering opportunities.">
-
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -22,60 +19,69 @@
       <a href="projects.html">Projects</a>
       <a href="about.html">About</a>
       <a href="contact.html" class="active">Contact</a>
-      <a class="cv-btn" href="about.html#cv">CV</a>
+      <a class="cv-btn" href="cv.pdf" target="_blank" rel="noopener">CV</a>
     </nav>
+    <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
+
+<nav class="mobile-nav" aria-label="Mobile navigation">
+  <a href="index.html">Home</a>
+  <a href="projects.html">Projects</a>
+  <a href="about.html">About</a>
+  <a href="contact.html" class="active">Contact</a>
+  <a class="cv-btn" href="cv.pdf" target="_blank" rel="noopener">Download CV</a>
+</nav>
 
 <main>
 
   <section class="reveal">
-    <div class="section-header">
-      <h2>Contact</h2>
-      <p class="lead">
-        I’m open to graduate roles, collaborations, and engineering opportunities.
-        The easiest way to reach me is by email.
-      </p>
-    </div>
-  </section>
-
-  <section class="reveal">
-    <h2>Get in touch</h2>
-
-    <div class="about-grid">
-      <div class="about-card">
-        <h3>Email</h3>
-        <p class="meta">Fastest response</p>
-        <p><a href="mailto:JamesMeichtry@icloud.com">JamesMeichtry@icloud.com</a></p>
-      </div>
-
-      <div class="about-card">
-        <h3>Phone</h3>
-        <p class="meta">UK</p>
-        <p><a href="tel:+447484898839">+44 7484 898839</a></p>
-      </div>
-
-      <div class="about-card">
-        <h3>LinkedIn</h3>
-        <p class="meta">Professional profile</p>
+    <div class="section-inner">
+      <div class="section-header">
+        <h2>Get in Touch</h2>
         <p>
-          <a href="https://www.linkedin.com" target="_blank" rel="noopener">
-            Add your LinkedIn URL here
-          </a>
+          I'm open to graduate roles, collaborations and engineering opportunities.
+          The easiest way to reach me is by email.
         </p>
       </div>
     </div>
   </section>
 
   <section class="reveal">
-    <div class="cta">
-      <h2>Before you go</h2>
-      <p class="lead">
-        If you’re reviewing my portfolio for a role, you can also view my CV timeline and key skills.
-      </p>
-      <div class="cta-actions">
-        <a class="btn-primary" href="about.html#cv">View CV</a>
-        <a class="btn-secondary" href="projects.html">View Projects</a>
+    <div class="section-inner">
+      <div class="section-label">Contact</div>
+      <h2 class="section-title">Reach Out</h2>
+      <div class="about-grid">
+        <div class="about-card">
+          <h3>Email</h3>
+          <span class="meta">Fastest response</span>
+          <p><a href="mailto:JamesMeichtry@icloud.com">JamesMeichtry@icloud.com</a></p>
+        </div>
+        <div class="about-card">
+          <h3>Phone</h3>
+          <span class="meta">UK mobile</span>
+          <p><a href="tel:+447484898839">+44 7484 898839</a></p>
+        </div>
+        <div class="about-card">
+          <h3>LinkedIn</h3>
+          <span class="meta">Professional profile</span>
+          <p><a href="https://www.linkedin.com" target="_blank" rel="noopener">Add your LinkedIn URL here</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reveal" style="background:var(--bg-alt);">
+    <div class="section-inner">
+      <div class="cta">
+        <h2>Before you go</h2>
+        <p class="lead">Reviewing my portfolio? Take a look at my CV timeline and project case studies.</p>
+        <div class="cta-actions">
+          <a class="btn-primary" href="about.html#cv">View CV</a>
+          <a class="btn-secondary" href="projects.html">View Projects</a>
+        </div>
       </div>
     </div>
   </section>
