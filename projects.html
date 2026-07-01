@@ -6,7 +6,6 @@
   <title>Projects | James Meichtry</title>
   <meta name="description" content="Projects by James Meichtry — University engineering projects and CRE technical work, with highlights and case studies.">
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -20,101 +19,109 @@
       <a href="projects.html" class="active">Projects</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
-      <a class="cv-btn" href="about.html#cv">CV</a>
+      <a class="cv-btn" href="cv.pdf" target="_blank" rel="noopener">CV</a>
     </nav>
+    <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
+
+<nav class="mobile-nav" aria-label="Mobile navigation">
+  <a href="index.html">Home</a>
+  <a href="projects.html" class="active">Projects</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a class="cv-btn" href="cv.pdf" target="_blank" rel="noopener">Download CV</a>
+</nav>
 
 <main>
 
   <section class="reveal">
-    <div class="section-header">
-      <h2>Projects</h2>
-      <p class="lead">
-        A selection of academic, technical, and creative projects demonstrating my
-        experience in engineering, automation, and interactive design.
-      </p>
-    </div>
-
-    <!-- UNIVERSITY PROJECTS -->
-    <div class="project-category">
-      <h3>University Projects</h3>
-
-      <div class="project-row">
-        <div class="project-text">
-          <h4>Automated Wire Cutter</h4>
-          <p>
-            Arduino-based precision wire cutting system using stepper motors,
-            DRV8825 drivers, an LCD interface, and emergency-stop integration.
-          </p>
-          <a href="project1.html">View case study →</a>
-        </div>
-        <div class="project-image">Image placeholder</div>
+    <div class="section-inner">
+      <div class="section-header">
+        <h2>Projects</h2>
+        <p class="lead">
+          A selection of academic, technical, and creative projects demonstrating my
+          experience in engineering, automation, and interactive design.
+        </p>
       </div>
 
-      <div class="project-row">
-        <div class="project-text">
-          <h4>Stepper Motor Control System</h4>
-          <p>
-            Testing and control framework for Motech and Sanmotion stepper motors,
-            showcasing microstepping, torque control, and driver configuration.
-          </p>
-          <a href="project2.html">View case study →</a>
+      <!-- UNIVERSITY PROJECTS -->
+      <div class="project-category">
+        <h3>University Projects</h3>
+
+        <div class="project-row">
+          <div class="project-text">
+            <h4>Automated Wire Cutter</h4>
+            <p>
+              Arduino-based precision wire cutting system using stepper motors,
+              DRV8825 drivers, an LCD interface, and emergency-stop integration.
+            </p>
+            <a href="project1.html">View case study →</a>
+          </div>
+          <div class="project-image">Image placeholder</div>
         </div>
-        <div class="project-image">Image placeholder</div>
+
+        <div class="project-row">
+          <div class="project-text">
+            <h4>Stepper Motor Control System</h4>
+            <p>
+              Testing and control framework for Motech and Sanmotion stepper motors,
+              showcasing microstepping, torque control, and driver configuration.
+            </p>
+            <a href="project2.html">View case study →</a>
+          </div>
+          <div class="project-image">Image placeholder</div>
+        </div>
+
+        <div class="project-row">
+          <div class="project-text">
+            <h4>University Project (Coming Soon)</h4>
+            <p>Placeholder — add your 3rd university project here when ready.</p>
+            <span class="mini-link">Case study coming soon</span>
+          </div>
+          <div class="project-image">Image placeholder</div>
+        </div>
+
+        <div class="project-row">
+          <div class="project-text">
+            <h4>University Project (Coming Soon)</h4>
+            <p>Placeholder — add your 4th university project here when ready.</p>
+            <span class="mini-link">Case study coming soon</span>
+          </div>
+          <div class="project-image">Image placeholder</div>
+        </div>
       </div>
 
-      <!-- placeholders for future university projects (no broken links) -->
-      <div class="project-row">
-        <div class="project-text">
-          <h4>University Project (Coming Soon)</h4>
-          <p>
-            Placeholder — add your 3rd university project here when ready.
-          </p>
-          <span class="mini-link">Case study coming soon</span>
-        </div>
-        <div class="project-image">Image placeholder</div>
-      </div>
+      <!-- CRE PROJECTS -->
+      <div class="project-category">
+        <h3>Creative Retail &amp; Entertainment (CRE)</h3>
 
-      <div class="project-row">
-        <div class="project-text">
-          <h4>University Project (Coming Soon)</h4>
-          <p>
-            Placeholder — add your 4th university project here when ready.
-          </p>
-          <span class="mini-link">Case study coming soon</span>
+        <div class="project-row">
+          <div class="project-text">
+            <h4>Music-Responsive Lighting Display</h4>
+            <p>
+              Interactive lighting installation translating audio frequencies into
+              synchronized visual effects for retail and event environments.
+            </p>
+            <span class="mini-link">Case study coming soon</span>
+          </div>
+          <div class="project-image">Image placeholder</div>
         </div>
-        <div class="project-image">Image placeholder</div>
-      </div>
-    </div>
-
-    <!-- CRE PROJECTS -->
-    <div class="project-category">
-      <h3>Creative Retail & Entertainment (CRE)</h3>
-
-      <div class="project-row">
-        <div class="project-text">
-          <h4>Music-Responsive Lighting Display</h4>
-          <p>
-            Interactive lighting installation translating audio frequencies into
-            synchronized visual effects for retail and event environments.
-          </p>
-          <span class="mini-link">Case study coming soon</span>
-        </div>
-        <div class="project-image">Image placeholder</div>
       </div>
     </div>
-
   </section>
 
-  <!-- SINGLE CTA (keep one only) -->
   <section class="reveal">
-    <div class="cta">
-      <h2>Interested in working together?</h2>
-      <p class="lead">I’m open to graduate roles and opportunities. Feel free to reach out.</p>
-      <div class="cta-actions">
-        <a class="btn-primary" href="contact.html">Contact</a>
-        <a class="btn-secondary" href="about.html#cv">View CV</a>
+    <div class="section-inner">
+      <div class="cta">
+        <h2>Interested in working together?</h2>
+        <p class="lead">I'm open to graduate roles and opportunities. Feel free to reach out.</p>
+        <div class="cta-actions">
+          <a class="btn-primary" href="contact.html">Contact</a>
+          <a class="btn-secondary" href="about.html#cv">View CV</a>
+        </div>
       </div>
     </div>
   </section>
