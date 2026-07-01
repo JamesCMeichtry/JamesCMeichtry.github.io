@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects | James Meichtry</title>
-  <meta name="description" content="Projects by James Meichtry — University engineering projects and CRE technical work, with highlights and case studies.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Automated Wire Cutter &amp; Stripper | James Meichtry</title>
+  <meta name="description" content="Final-year project case study — an automated wire cutter and stripper. Arduino Uno control, twin DRV8825 stepper axes, rotary-encoder + LCD interface, ±2 mm feed accuracy across 0.5–4.0 mm² wire.">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -37,101 +37,196 @@
 
 <main>
 
+  <!-- TITLE -->
   <section class="reveal">
     <div class="section-inner">
       <div class="section-header">
-        <h2>Projects</h2>
-        <p class="lead">
-          A selection of academic, technical, and creative projects demonstrating my
-          experience in engineering, automation, and interactive design.
+        <span class="project-tag">Embedded Systems · Final-Year Project</span>
+        <h2>Automated Wire Cutter &amp; Stripper</h2>
+        <p>
+          A compact, low-cost machine that automates wire feeding, cutting and
+          stripping for small workshops and educational use — built around an
+          Arduino Uno with twin stepper-driven axes and a menu-driven interface.
+          <br><span style="opacity:.7; font-size:.9rem;">Wolfson School, Loughborough University · Module 23WSC325 · Student ID F226426</span>
         </p>
       </div>
+    </div>
+  </section>
 
-      <!-- UNIVERSITY PROJECTS -->
-      <div class="project-category">
-        <h3>University Projects</h3>
-
-        <div class="project-row">
-          <div class="project-text">
-            <h4>Automated Wire Cutter &amp; Stripper</h4>
-            <p>
-              My final-year project (Module 23WSC325): a compact, low-cost machine that
-              automates wire feeding, cutting and stripping. Built around an Arduino Uno
-              with twin DRV8825-driven stepper axes, a rotary-encoder and LCD interface,
-              and a milled-aluminium and 3D-printed chassis — feeding accurate to ±2 mm
-              across 0.5–4.0 mm² wire.
-            </p>
-            <a href="project1.html">View case study →</a>
-          </div>
-          <div class="project-image">
-            <img src="images/wirecutter-cad.png"
-                 alt="CAD render of the automated wire cutter and stripper"
-                 style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:1;"
-                 onerror="this.style.display='none'">
-            <span style="position:relative; z-index:0;">Image placeholder</span>
-          </div>
-        </div>
-
-        <div class="project-row">
-          <div class="project-text">
-            <h4>Stepper Motor Control System</h4>
-            <p>
-              Testing and control framework for Sanmotion and Motech stepper motors —
-              matching each motor to a DRV8825 driver, setting current limits by tuning
-              VREF, and calibrating microstepping and step-per-mm resolution for smooth,
-              accurate motion.
-            </p>
-            <a href="project2.html">View case study →</a>
-          </div>
-          <div class="project-image">Image placeholder</div>
-        </div>
-
-        <div class="project-row">
-          <div class="project-text">
-            <h4>University Project (Coming Soon)</h4>
-            <p>Placeholder — add your 3rd university project here when ready.</p>
-            <span class="mini-link">Case study coming soon</span>
-          </div>
-          <div class="project-image">Image placeholder</div>
-        </div>
-
-        <div class="project-row">
-          <div class="project-text">
-            <h4>University Project (Coming Soon)</h4>
-            <p>Placeholder — add your 4th university project here when ready.</p>
-            <span class="mini-link">Case study coming soon</span>
-          </div>
-          <div class="project-image">Image placeholder</div>
-        </div>
+  <!-- HERO IMAGE (CAD) -->
+  <section class="reveal">
+    <div class="section-inner">
+      <div class="project-image" style="border-radius:var(--radius); min-height:360px;">
+        <img src="images/wirecutter-cad.png"
+             alt="Full CAD render of the automated wire cutter and stripper, showing the wire spool, feed rollers, leadscrew cutting axis and control panel with LCD"
+             style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:1;"
+             onerror="this.style.display='none'">
+        <span style="position:relative; z-index:0;">Image placeholder — add CAD render</span>
       </div>
+      <p style="text-align:center; font-size:0.85rem; color:var(--muted); margin-top:0.75rem;">Figure 1 — Full system CAD</p>
+    </div>
+  </section>
 
-      <!-- CRE PROJECTS -->
-      <div class="project-category">
-        <h3>Creative Retail &amp; Entertainment (CRE)</h3>
+  <!-- OVERVIEW -->
+  <section class="reveal">
+    <div class="section-inner">
+      <div class="section-label">Overview</div>
+      <h2 class="section-title">The problem &amp; the brief</h2>
+      <p class="about-text">
+        Preparing large quantities of cut-and-stripped wire by hand is slow, tiring
+        and inconsistent — and commercial machines that solve it are typically either
+        very expensive or too large for small workshops and teaching labs. The brief
+        was to close that gap with an affordable, compact alternative.
+      </p>
+      <p class="about-text">
+        I set four objectives at the outset: automate feeding and stripping with
+        repeatable accuracy; handle a range of wire sizes from 0.5 mm² to 4.0 mm²;
+        provide a simple interface for setting length and batch quantity; and base the
+        controller on an Arduino Uno to keep it low-cost and accessible.
+      </p>
+    </div>
+  </section>
 
-        <div class="project-row">
-          <div class="project-text">
-            <h4>Music-Responsive Lighting Display</h4>
-            <p>
-              Interactive lighting installation translating audio frequencies into
-              synchronized visual effects for retail and event environments.
-            </p>
-            <span class="mini-link">Case study coming soon</span>
-          </div>
-          <div class="project-image">Image placeholder</div>
+  <!-- QUICK FACTS -->
+  <section class="reveal">
+    <div class="section-inner">
+      <div class="facts">
+        <div><strong>Year</strong><span>2024 – 2025</span></div>
+        <div><strong>Type</strong><span>Individual FYP</span></div>
+        <div><strong>Role</strong><span>Design, Build &amp; Test</span></div>
+        <div><strong>Feed Accuracy</strong><span>±2 mm</span></div>
+        <div><strong>Wire Range</strong><span>0.5 – 4.0 mm²</span></div>
+        <div><strong>Status</strong><span>Working Prototype</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="reveal">
+    <div class="section-inner">
+      <div class="section-label">Design</div>
+      <h2 class="section-title">How it works</h2>
+      <div class="case-grid" style="padding:0;">
+        <div class="case-card">
+          <h3>Wire Feeding</h3>
+          <p>A stepper motor drives a lower roller while a spring-loaded upper roller keeps constant clamping pressure on the wire. Feed length is set by counting calibrated motor pulses against a measured 100 steps/mm.</p>
+        </div>
+        <div class="case-card">
+          <h3>Cutting &amp; Stripping</h3>
+          <p>Rather than a servo, a leadscrew-driven stepper moves the blade vertically for controlled, repeatable motion — simpler mechanically while still giving fine control over cut depth.</p>
+        </div>
+        <div class="case-card">
+          <h3>Operator Interface</h3>
+          <p>A rotary encoder with a push-button sets wire length and number of cuts, and an LCD gives live feedback — so the machine runs without touching any code.</p>
+        </div>
+        <div class="case-card">
+          <h3>Motion Control</h3>
+          <p>Two DRV8825 drivers handle the feed and cut axes from the Arduino Uno, using step/direction signals and microstepping for smoother, more precise movement.</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ENGINEERING DETAIL -->
+  <section class="reveal">
+    <div class="section-inner">
+      <div class="section-label">Engineering Detail</div>
+      <h2 class="section-title">Under the hood</h2>
+      <p class="about-text">
+        The drive hardware was chosen by checking the SANMOTION F2 (SF2422-10B41)
+        and Motech steppers against the DRV8825 driver: a 2-phase bipolar motor at
+        24 V and 1 A/phase, comfortably inside the driver's 8.2–45 V range and
+        ~1.5 A/phase (uncooled) capability. Each driver's current limit was set by
+        measuring and tuning VREF — 0.5 V for the 1 A Sanmotion and 0.665 V for the
+        1.33 A Motech — for reliable torque without overheating.
+      </p>
+
+      <div class="facts">
+        <div><strong>Controller</strong><span>Arduino Uno</span></div>
+        <div><strong>Drivers</strong><span>2 × DRV8825</span></div>
+        <div><strong>Motors</strong><span>SANMOTION F2 · Motech</span></div>
+        <div><strong>Supply</strong><span>24 V DC</span></div>
+        <div><strong>Resolution</strong><span>100 steps/mm</span></div>
+        <div><strong>Interface</strong><span>Rotary Encoder + LCD</span></div>
+        <div><strong>Library</strong><span>AccelStepper</span></div>
+        <div><strong>Wire Range</strong><span>0.5 – 4.0 mm²</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MANUFACTURING -->
+  <section class="reveal">
+    <div class="section-inner">
+      <div class="section-label">Manufacturing</div>
+      <h2 class="section-title">From CAD to hardware</h2>
+      <p class="about-text">
+        The prototype combined manual machining with 3D printing to keep it compact,
+        strong where it mattered, and light everywhere else. The motor backing plate
+        for the feed system was manually milled from aluminium for the precision and
+        stiffness needed to hold the stepper under load, then hand-finished and
+        deburred. Structural parts — the electronics housing and control panel — were
+        FFF 3D-printed in PLA, designed for easy assembly and lightly sanded for a
+        clean, accurate fit.
+      </p>
+      <div class="project-image" style="border-radius:var(--radius); min-height:320px;">
+        <img src="images/wirecutter-print.png"
+             alt="3D printer bed showing the housing and control-panel parts printing in PLA with support material"
+             style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:1;"
+             onerror="this.style.display='none'">
+        <span style="position:relative; z-index:0;">Image placeholder — add 3D print photo</span>
+      </div>
+      <p style="text-align:center; font-size:0.85rem; color:var(--muted); margin-top:0.75rem;">Figure 2 — Housing &amp; control-panel parts, FFF 3D print (PLA)</p>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section class="reveal">
+    <div class="section-inner">
+      <div class="section-label">Testing &amp; Results</div>
+      <h2 class="section-title">What it achieved</h2>
+      <p class="about-text">
+        Feeding was tested across 0.5, 1.5, 2.5 and 4.0 mm² wire and proved highly
+        consistent — within ±2 mm on every gauge, with no slippage and no deformation
+        of the insulation. Blade movement was smooth and reliable, and insulation
+        cutting was partial but repeatable. Full stripping wasn't always achieved on
+        tougher wires — a torque limit on the cutter axis rather than a flaw in the
+        approach.
+      </p>
+      <ul class="bullets">
+        <li>Feed accuracy within ±2 mm across all four tested gauges (0.5–4.0 mm²).</li>
+        <li>No slippage or insulation deformation during feeding.</li>
+        <li>Menu-driven length and batch-quantity control with live LCD feedback.</li>
+        <li>Each subsystem validated independently before full integration.</li>
+        <li>Full stripping limited by cutter-axis torque and blade geometry on thick insulation.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- REFLECTION -->
+  <section class="reveal">
+    <div class="section-inner">
+      <div class="section-label">Reflection</div>
+      <h2 class="section-title">What I'd do next</h2>
+      <p class="about-text">
+        The biggest lesson was how much small design choices — clamping force, motor
+        timing, mounting stiffness — decide whether an automated system is actually
+        repeatable. With more time I'd fit a higher-torque cutter motor, refine the
+        blade geometry, stiffen the blade mount, and add an automatic length-measuring
+        sensor to close the loop on feed and cut accuracy.
+      </p>
+      <a href="projects.html" class="back-link">← Back to Projects</a>
+    </div>
+  </section>
+
+  <!-- CTA -->
   <section class="reveal">
     <div class="section-inner">
       <div class="cta">
-        <h2>Interested in working together?</h2>
-        <p class="lead">I'm open to graduate roles and opportunities. Feel free to reach out.</p>
+        <h2>Want to talk through it?</h2>
+        <p class="lead">Happy to go deeper on the design, the control code or the testing.</p>
         <div class="cta-actions">
-          <a class="btn-primary" href="contact.html">Contact</a>
-          <a class="btn-secondary" href="about.html#cv">View CV</a>
+          <a class="btn-primary" href="contact.html">Get in touch</a>
+          <a class="btn-secondary" href="projects.html">More Projects</a>
         </div>
       </div>
     </div>
