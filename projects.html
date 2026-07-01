@@ -53,22 +53,33 @@
 
         <div class="project-row">
           <div class="project-text">
-            <h4>Automated Wire Cutter</h4>
+            <h4>Automated Wire Cutter &amp; Stripper</h4>
             <p>
-              Arduino-based precision wire cutting system using stepper motors,
-              DRV8825 drivers, an LCD interface, and emergency-stop integration.
+              My final-year project (Module 23WSC325): a compact, low-cost machine that
+              automates wire feeding, cutting and stripping. Built around an Arduino Uno
+              with twin DRV8825-driven stepper axes, a rotary-encoder and LCD interface,
+              and a milled-aluminium and 3D-printed chassis — feeding accurate to ±2 mm
+              across 0.5–4.0 mm² wire.
             </p>
             <a href="project1.html">View case study →</a>
           </div>
-          <div class="project-image">Image placeholder</div>
+          <div class="project-image">
+            <img src="images/wirecutter-cad.png"
+                 alt="CAD render of the automated wire cutter and stripper"
+                 style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:1;"
+                 onerror="this.style.display='none'">
+            <span style="position:relative; z-index:0;">Image placeholder</span>
+          </div>
         </div>
 
         <div class="project-row">
           <div class="project-text">
             <h4>Stepper Motor Control System</h4>
             <p>
-              Testing and control framework for Motech and Sanmotion stepper motors,
-              showcasing microstepping, torque control, and driver configuration.
+              Testing and control framework for Sanmotion and Motech stepper motors —
+              matching each motor to a DRV8825 driver, setting current limits by tuning
+              VREF, and calibrating microstepping and step-per-mm resolution for smooth,
+              accurate motion.
             </p>
             <a href="project2.html">View case study →</a>
           </div>
